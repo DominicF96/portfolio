@@ -1,0 +1,18 @@
+.collapsible_container:hover {
+  > div > div > .collapsible {
+    grid-template-rows: 1fr;
+  }
+}
+
+.collapsible {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+  width: 100%;
+  min-height: 10px;
+}
+
+.collapsible > div {
+  overflow: hidden;
+  grid-row: 1;
+}

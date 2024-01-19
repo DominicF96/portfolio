@@ -1,0 +1,166 @@
+"use client";
+import React, { useState } from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import {
+  GitHubLogoIcon,
+  LinkedInLogoIcon,
+  TwitterLogoIcon,
+} from "@radix-ui/react-icons";
+import { Button } from "../ui/button";
+import socials from "@/constants/socials";
+import Link from "next/link";
+import { Sling as Hamburger } from "hamburger-react";
+import navbarLinks from "@/constants/links";
+import { Locale } from "@/i18n.config";
+import i18n from "./i18n";
+
+type Props = {
+  locale: Locale;
+};
+
+function Navbar({ locale }: Props) {
+  const [isOpen, setOpen] = useState(false);
+  return (
+    <nav className="sticky max-w-[1024px] z-50 m-auto bg-background py-4 px-4 md:p-8 flex items-center">
+      <Avatar className="inline-block mr-4 h-11 w-11">
+        <AvatarImage
+          src="https://avatars.githubusercontent.com/u/36671850?v=4"
+          alt="@DominicF96"
+        />
+        <AvatarFallback
+          className="bg-primary text-primary-foreground font-bold"
+          style={{ fontFamily: "Poppins" }}
+        >
+          DF
+        </AvatarFallback>
+      </Avatar>
+      <span className="whitespace-nowrap" style={{ fontSize: "20px" }}>
+        Dominic Fournier
+      </span>
+      <Button
+        variant="link"
+        className="md:hidden ml-auto pr-0"
+        onClick={() => setOpen(!isOpen)}
+      >
+        <Hamburger toggled={isOpen} color="white" toggle={setOpen} size={24} />
+      </Button>
+      <NavbarDesktopLinks locale={locale} />
+      <NavbarMobileDrawer locale={locale} isOpen={isOpen} />
+    </nav>
+  );
+}
+
+const SocialsLogoMap = (social: string) => {
+  switch (social) {
+    case "github":
+      return <GitHubLogoIcon color="#69D17E" height={24} width={24} />;
+    case "linkedin":
+      return <LinkedInLogoIcon color="#69D17E" height={24} width={24} />;
+    case "twitter":
+      return <TwitterLogoIcon color="#69D17E" height={24} width={24} />;
+    default:
+      return null;
+  }
+};
+
+type NavbarMobileDrawerProps = {
+  locale: Locale;
+  isOpen: boolean;
+};
+
+function NavbarMobileDrawer({ locale, isOpen }: NavbarMobileDrawerProps) {
+  const t = i18n[locale];
+  return (
+    <div
+      className={`fixed top-[76px] transition-all	duration-500 ${
+        isOpen ? "-left-0" : "left-full"
+      } w-full bg-background md:hidden z-50 py-24 px-4 md:p-8 flex flex-col justify-between`}
+      style={{ height: "calc(100% - 76px)" }}
+    >
+      <ul className="flex flex-col gap-2">
+        {navbarLinks.map((link) => (
+          <li key={link.key}>
+            <Link href={link.url}>
+              <Button
+                className="-ml-4 rounded-l-none"
+                variant="ghost"
+                size="lg"
+              >
+                {t[link.key as keyof typeof t]}
+              </Button>
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <ul className="flex flex-col gap-2 ">
+        <li>
+          <ul className="flex gap-2">
+            {socials.map((social) => (
+              <li key={social.name}>
+                <Link href={social.url} target="_blank">
+                  <Button variant="link" className="px-2" aria-label="Github">
+                    {SocialsLogoMap(social.name)}
+                  </Button>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </li>
+        <li>
+          <Link href="#contact" className="w-full">
+            <Button className="w-full mt-4" size="lg">
+              {t.contact}
+            </Button>
+          </Link>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+type NavbarDesktopLinksProps = {
+  locale: Locale;
+};
+
+function NavbarDesktopLinks({ locale }: NavbarDesktopLinksProps) {
+  const t = i18n[locale];
+  return (
+    <div className="hidden md:block ml-8 w-full">
+      <ul className="flex justify-between">
+        <li>
+          <ul className="flex">
+            {navbarLinks.map((link) => (
+              <li key={link.key}>
+                <Link href={link.url}>
+                  <Button variant="ghost">
+                    {t[link.key as keyof typeof t]}
+                  </Button>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </li>
+        <li>
+          <ul className="flex items-center">
+            {socials.map((social) => (
+              <li key={social.name}>
+                <Link href={social.url} target="_blank">
+                  <Button variant="link" className="px-2" aria-label="Github">
+                    {SocialsLogoMap(social.name)}
+                  </Button>
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link href="#contact">
+                <Button className="ml-4">{t.contact}</Button>
+              </Link>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+export default Navbar;

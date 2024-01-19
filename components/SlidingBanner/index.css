@@ -1,0 +1,25 @@
+.sliding-text-rtl {
+  animation: slideRightToLeft 50s infinite linear;
+}
+
+.sliding-text-ltr {
+  animation: slideLeftToRight 50s infinite linear;
+}
+
+@keyframes slideRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-500%);
+  }
+}
+
+@keyframes slideLeftToRight {
+  0% {
+    transform: translateX(-500%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
