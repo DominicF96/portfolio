@@ -56,7 +56,9 @@ function CaseStudyRow({ caseData, locale }: Props) {
       >
         <CenteredContainer>
           <H3>{t.cases[caseData.id as keyof typeof t.cases].title}</H3>
-          <Muted>{dateFormat.format(date)}</Muted>
+          <Muted>
+            <time>{dateFormat.format(date)}</time>
+          </Muted>
           <div className="collapsible">
             <div className="transition-none">
               <P className="hidden md:block mt-4 md:max-w-[325px] lg:max-w-[450px] text-background">

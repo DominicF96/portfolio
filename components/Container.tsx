@@ -17,6 +17,18 @@ function CenteredContainer({ children, className }: ContainerProps) {
   );
 }
 
+function NarrowCenteredContainer({ children, className }: ContainerProps) {
+  return (
+    <div
+      className={`relative md:max-w-[800px] lg:max-w-[800px] mx-auto px-4 md:px-8 ${
+        className || ""
+      }`}
+    >
+      {children}
+    </div>
+  );
+}
+
 function PageContainer({ children, className }: ContainerProps) {
   return (
     <main className={`relative pt-32 md:pt-36 ${className || ""}`}>
@@ -25,4 +37,4 @@ function PageContainer({ children, className }: ContainerProps) {
   );
 }
 
-export { CenteredContainer, PageContainer };
+export { NarrowCenteredContainer, CenteredContainer, PageContainer };

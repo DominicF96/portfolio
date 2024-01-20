@@ -121,3 +121,37 @@ html {
   color: #091b0d;
   background: #fff;
 }
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5rem;
+  padding: 1rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+h3 {
+  font-size: 1.75rem;
+  padding: 1rem 0;
+}
+
+h4 {
+  font-size: 1rem;
+  padding: 1rem 0;
+}
+
+h5 {
+  font-size: 1.25rem;
+  padding: 1rem 0;
+}
+
+h6 {
+  font-size: 1rem;
+  padding: 1rem 0;
+}
