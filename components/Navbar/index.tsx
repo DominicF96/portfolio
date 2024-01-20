@@ -13,6 +13,8 @@ import { Sling as Hamburger } from "hamburger-react";
 import navbarLinks from "@/constants/links";
 import { Locale } from "@/i18n.config";
 import i18n from "./i18n";
+import { CenteredContainer } from "../Container";
+import Socials from "../Socials";
 
 type Props = {
   locale: Locale;
@@ -21,47 +23,43 @@ type Props = {
 function Navbar({ locale }: Props) {
   const [isOpen, setOpen] = useState(false);
   return (
-    <nav className="sticky max-w-[1024px] z-50 m-auto bg-background py-4 px-4 md:p-8 flex items-center">
-      <Avatar className="inline-block mr-4 h-11 w-11">
-        <AvatarImage
-          src="https://avatars.githubusercontent.com/u/36671850?v=4"
-          alt="@DominicF96"
-        />
-        <AvatarFallback
-          className="bg-primary text-primary-foreground font-bold"
-          style={{ fontFamily: "Poppins" }}
+    <nav className="fixed w-full z-50 m-auto bg-background py-4">
+      <CenteredContainer className="flex items-center">
+        <Link href="/" className="flex items-center">
+          <Avatar className="inline-block mr-4 h-11 w-11">
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/36671850?v=4"
+              alt="@DominicF96"
+            />
+            <AvatarFallback
+              className="bg-primary text-primary-foreground font-bold"
+              style={{ fontFamily: "Poppins" }}
+            >
+              DF
+            </AvatarFallback>
+          </Avatar>
+          <span className="whitespace-nowrap" style={{ fontSize: "20px" }}>
+            Dominic Fournier
+          </span>
+        </Link>
+        <Button
+          variant="link"
+          className="md:hidden ml-auto pr-0"
+          onClick={() => setOpen(!isOpen)}
         >
-          DF
-        </AvatarFallback>
-      </Avatar>
-      <span className="whitespace-nowrap" style={{ fontSize: "20px" }}>
-        Dominic Fournier
-      </span>
-      <Button
-        variant="link"
-        className="md:hidden ml-auto pr-0"
-        onClick={() => setOpen(!isOpen)}
-      >
-        <Hamburger toggled={isOpen} color="white" toggle={setOpen} size={24} />
-      </Button>
-      <NavbarDesktopLinks locale={locale} />
-      <NavbarMobileDrawer locale={locale} isOpen={isOpen} />
+          <Hamburger
+            toggled={isOpen}
+            color="white"
+            toggle={setOpen}
+            size={24}
+          />
+        </Button>
+        <NavbarDesktopLinks locale={locale} />
+        <NavbarMobileDrawer locale={locale} isOpen={isOpen} />
+      </CenteredContainer>
     </nav>
   );
 }
-
-const SocialsLogoMap = (social: string) => {
-  switch (social) {
-    case "github":
-      return <GitHubLogoIcon color="#69D17E" height={24} width={24} />;
-    case "linkedin":
-      return <LinkedInLogoIcon color="#69D17E" height={24} width={24} />;
-    case "twitter":
-      return <TwitterLogoIcon color="#69D17E" height={24} width={24} />;
-    default:
-      return null;
-  }
-};
 
 type NavbarMobileDrawerProps = {
   locale: Locale;
@@ -94,20 +92,10 @@ function NavbarMobileDrawer({ locale, isOpen }: NavbarMobileDrawerProps) {
       </ul>
       <ul className="flex flex-col gap-2 ">
         <li>
-          <ul className="flex gap-2">
-            {socials.map((social) => (
-              <li key={social.name}>
-                <Link href={social.url} target="_blank">
-                  <Button variant="link" className="px-2" aria-label="Github">
-                    {SocialsLogoMap(social.name)}
-                  </Button>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <Socials />
         </li>
         <li>
-          <Link href="#contact" className="w-full">
+          <Link href="mailto:hello@dominicfournier.com" className="w-full">
             <Button className="w-full mt-4" size="lg">
               {t.contact}
             </Button>
@@ -142,17 +130,11 @@ function NavbarDesktopLinks({ locale }: NavbarDesktopLinksProps) {
         </li>
         <li>
           <ul className="flex items-center">
-            {socials.map((social) => (
-              <li key={social.name}>
-                <Link href={social.url} target="_blank">
-                  <Button variant="link" className="px-2" aria-label="Github">
-                    {SocialsLogoMap(social.name)}
-                  </Button>
-                </Link>
-              </li>
-            ))}
             <li>
-              <Link href="#contact">
+              <Socials />
+            </li>
+            <li>
+              <Link href="mailto:hello@dominicfournier.com">
                 <Button className="ml-4">{t.contact}</Button>
               </Link>
             </li>

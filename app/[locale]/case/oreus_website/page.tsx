@@ -1,9 +1,14 @@
+import { CenteredContainer, PageContainer } from "@/components/Container";
 import React from "react";
 
 type Props = {};
 
 function CaseStudyOreusWebsitePage({}: Props) {
-  return <div>CaseStudyOreusWebsitePage</div>;
+  return (
+    <PageContainer>
+      <CenteredContainer>CaseStudyOreusWebsitePage</CenteredContainer>
+    </PageContainer>
+  );
 }
 
 export default CaseStudyOreusWebsitePage;

@@ -5,12 +5,24 @@ type ContainerProps = {
   className?: string;
 };
 
-function Container({ children, className }: ContainerProps) {
+function CenteredContainer({ children, className }: ContainerProps) {
   return (
-    <div className={`max-w-[1024px] mx-auto px-8 ${className || ""}`}>
+    <div
+      className={`relative md:max-w-[1024px] lg:max-w-[1200px] mx-auto px-4 md:px-8 ${
+        className || ""
+      }`}
+    >
       {children}
     </div>
   );
 }
 
-export default Container;
+function PageContainer({ children, className }: ContainerProps) {
+  return (
+    <main className={`relative pt-32 md:pt-36 ${className || ""}`}>
+      {children}
+    </main>
+  );
+}
+
+export { CenteredContainer, PageContainer };

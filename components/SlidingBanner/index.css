@@ -1,23 +1,31 @@
 .sliding-text-rtl {
-  animation: slideRightToLeft 50s infinite linear;
+  animation: slideRightToLeft 200s infinite linear;
+}
+
+.sliding-text-rtl:hover {
+  animation-play-state: paused;
+}
+
+.sliding-text-ltr:hover {
+  animation-play-state: paused;
 }
 
 .sliding-text-ltr {
-  animation: slideLeftToRight 50s infinite linear;
+  animation: slideLeftToRight 200s infinite linear;
 }
 
 @keyframes slideRightToLeft {
   0% {
-    transform: translateX(0);
+    transform: translateX(-200%);
   }
   100% {
-    transform: translateX(-500%);
+    transform: translateX(-1200%);
   }
 }
 
 @keyframes slideLeftToRight {
   0% {
-    transform: translateX(-500%);
+    transform: translateX(-1000%);
   }
   100% {
     transform: translateX(0);

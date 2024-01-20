@@ -65,7 +65,7 @@ html {
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
+    --input: 133 50% 7%;
     --ring: 0 0% 3.9%;
 
     --radius: 5px;
@@ -111,12 +111,13 @@ html {
   }
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+  /* Code for Firefox */
   color: #091b0d;
-  background: rgba(105, 209, 126, 0.75);
+  background: #fff;
 }
 
 ::selection {
   color: #091b0d;
-  background: rgba(105, 209, 126, 0.75);
+  background: #fff;
 }

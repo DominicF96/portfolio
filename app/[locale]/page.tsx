@@ -3,6 +3,7 @@ import SlidingBanner from "@/components/SlidingBanner";
 import { Locale } from "@/i18n.config";
 import metadata from "./metadata";
 import CaseStudies from "@/components/CaseStudies";
+import { PageContainer } from "@/components/Container";
 type HomePageProps = {
   params: {
     locale: Locale;
@@ -13,10 +14,10 @@ export const generateMetadata = metadata;
 export default function HomePage({ params }: HomePageProps) {
   const { locale } = params;
   return (
-    <main>
+    <PageContainer>
       <Hero locale={locale} />
-      <SlidingBanner locale={locale} className="mt-32 md:mt-48" />
       <CaseStudies locale={locale} />
-    </main>
+      <SlidingBanner locale={locale} className="mt-32 md:mt-48" />
+    </PageContainer>
   );
 }

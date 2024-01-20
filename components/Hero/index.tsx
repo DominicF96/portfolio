@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
-import Container from "../Container";
+import { useRouter } from "next/navigation";
+import { CenteredContainer } from "../Container";
 import { H1, Lead, P } from "../Typography";
 import { Button } from "../ui/button";
 import ScrollCTA from "../ScrollCTA";
@@ -13,8 +15,9 @@ type Props = {
 
 function Hero({ locale }: Props) {
   const t = i18n[locale];
+  const router = useRouter();
   return (
-    <Container className="py-8 md:py-16 relative">
+    <CenteredContainer>
       <div className="relative z-40">
         <Lead>
           {t.flavor.part_1}&nbsp;
@@ -27,17 +30,26 @@ function Hero({ locale }: Props) {
         </H1>
         <P className="mt-4 max-w-[465px]">{t.description}</P>
         <div className="flex flex-col sm:flex-row gap-4 mt-12">
-          <Button size="lg" className="w-fit">
+          <Button
+            size="lg"
+            className="w-fit"
+            onClick={() => router.push("#case_studies")}
+          >
             {t.cta.primary}
           </Button>
-          <Button size="lg" className="w-fit" variant="outline">
+          <Button
+            size="lg"
+            className="w-fit"
+            variant="outline"
+            onClick={() => router.push("/blog")}
+          >
             {t.cta.secondary}
           </Button>
         </div>
         <ScrollCTA locale={locale} className="mt-11 md:mt-28" />
       </div>
       <HeroGraphic />
-    </Container>
+    </CenteredContainer>
   );
 }
 

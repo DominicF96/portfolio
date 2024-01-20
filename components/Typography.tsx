@@ -12,7 +12,7 @@ export const H1 = (props: any) => {
   return (
     <h1
       className={`scroll-m-20 text-4xl md:text-6xl font-extrabold tracking-tight ${
-        className || ""
+        props.className || ""
       }`}
       {...other}
     />
@@ -24,7 +24,7 @@ export const H2 = (props: any) => {
   return (
     <h2
       className={`scroll-m-20 text-4xl md:text-5xl font-semibold tracking-tight transition-colors ${
-        className || ""
+        props.className || ""
       }`}
       {...other}
     />
@@ -36,7 +36,7 @@ export const H3 = (props: any) => {
   return (
     <h3
       className={`scroll-m-20 text-2xl font-semibold tracking-tight ${
-        className || ""
+        props.className || ""
       }`}
       {...props}
     />
@@ -47,7 +47,7 @@ export const H4 = (props: any) => {
   return (
     <h4
       className={`scroll-m-20 text-xl font-semibold tracking-tight ${
-        className || ""
+        props.className || ""
       }`}
       {...props}
     />
@@ -78,7 +78,7 @@ export const P = (props: any) => {
   const [className, other] = extractProps(props);
   return (
     <p
-      className={`leading-7 [&:not(:first-child)]:mt-6 ${className || ""}`}
+      className={`leading-7 [&:not(:first-child)]:mt-6 ${props.className || ""}`}
       {...other}
     />
   );
@@ -88,7 +88,7 @@ export const Blockquote = (props: any) => {
   const [className, other] = extractProps(props);
   return (
     <blockquote
-      className={`mt-6 border-l-2 pl-6 italic ${className || ""}`}
+      className={`mt-6 border-l-2 pl-6 italic ${props.className || ""}`}
       {...other}
     />
   );
@@ -99,7 +99,7 @@ export const InlineCode = (props: any) => {
   return (
     <code
       className={`relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold ${
-        className || ""
+        props.className || ""
       }`}
       {...other}
     />
@@ -108,18 +108,13 @@ export const InlineCode = (props: any) => {
 
 export const Lead = (props: any) => {
   const [className, other] = extractProps(props);
-  return (
-    <p
-      className={`text-lg text-primary ${className || ""}`}
-      {...other}
-    />
-  );
+  return <p className={`text-lg text-primary ${props.className || ""}`} {...other} />;
 };
 
 export const Large = (props: any) => {
   const [className, other] = extractProps(props);
   return (
-    <div className={`text-lg font-semibold ${className || ""}`} {...other} />
+    <div className={`text-lg font-semibold ${props.className || ""}`} {...other} />
   );
 };
 
@@ -127,7 +122,7 @@ export const Small = (props: any) => {
   const [className, other] = extractProps(props);
   return (
     <small
-      className={`text-sm font-medium leading-none ${className || ""}`}
+      className={`text-sm font-medium leading-none ${props.className || ""}`}
       {...other}
     />
   );
@@ -137,7 +132,7 @@ export const Muted = (props: any) => {
   const [className, other] = extractProps(props);
   return (
     <div
-      className={`text-sm text-muted-foreground ${className || ""}`}
+      className={`text-sm text-muted-foreground ${props.className || ""}`}
       {...other}
     />
   );

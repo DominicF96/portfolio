@@ -1,5 +1,7 @@
 export interface I18n {
   title: string;
+  see_case_study: string;
+  open: string;
   cases: {
     [key: string]: {
       title: string;
@@ -10,6 +12,8 @@ export interface I18n {
 
 const en = {
   title: "Case Studies",
+  see_case_study: "See Case Study",
+  open: "Open",
   cases: {
     pinax_app: {
       title: "Pinax • Cloud Services",
@@ -51,6 +55,8 @@ const en = {
 
 const fr = {
   title: "Études de cas",
+  see_case_study: "Voir l'étude de cas",
+  open: "Ouvrir",
   cases: {
     pinax_app: {
       title: "Pinax • Plateforme Web",

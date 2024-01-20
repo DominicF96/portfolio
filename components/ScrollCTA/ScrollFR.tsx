@@ -14,8 +14,8 @@ function ScrollFR({}: Props) {
         <path
           d="M470.096 250.599C470.096 279.49 464.406 308.098 453.35 334.791C442.293 361.483 426.088 385.736 405.659 406.165C385.229 426.594 360.976 442.8 334.284 453.856C307.592 464.912 278.984 470.603 250.092 470.603C221.201 470.603 192.593 464.912 165.9 453.856C139.208 442.8 114.955 426.594 94.5261 406.165C74.0968 385.736 57.8914 361.483 46.8352 334.791C35.7789 308.098 30.0884 279.49 30.0884 250.599"
           stroke="white"
-          stroke-width="8"
-          stroke-linecap="round"
+          strokeWidth="8"
+          strokeLinecap="round"
         />
         <path
           d="M17.5801 195.502L23.1987 196.91L17.8087 221.501L35.6515 225.97L40.0276 206.004L45.6462 207.411L41.2702 227.377L65.1113 233.347L63.4925 240.733L10.5713 227.48L17.5801 195.502Z"
@@ -77,7 +77,7 @@ function ScrollFR({}: Props) {
         height="184"
         rx="51.4365"
         stroke="white"
-        stroke-width="8"
+        strokeWidth="8"
       />
       <rect
         x="237.868"
@@ -86,7 +86,7 @@ function ScrollFR({}: Props) {
         height="48.1955"
         rx="12.2254"
         stroke="white"
-        stroke-width="8"
+        strokeWidth="8"
       />
       <rect
         x="237.868"
@@ -95,7 +95,7 @@ function ScrollFR({}: Props) {
         height="48.1955"
         rx="12.2254"
         stroke="white"
-        stroke-width="8"
+        strokeWidth="8"
         fill="white"
         id="opacity-breathe"
       />
