@@ -29,7 +29,7 @@ function BlogHero({ locale }: Props) {
         </H1>
         <P className="mt-4 max-w-[465px]">{t.description}</P>
       </div>
-      <HeroGraphic/>
+      {/* <HeroGraphic/> */}
     </CenteredContainer>
   );
 }
