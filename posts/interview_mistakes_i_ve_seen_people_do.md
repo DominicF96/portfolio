@@ -2,6 +2,9 @@
 title: Interview Mistakes I’ve Seen People Do
 date: 2022-01-11
 excerpt: ... And how to overcome them
+img: interview.webp
+img_alt: Interview between two persons in a meeting room
+img_src: https://unsplash.com/fr/photos/femme-en-chemise-blanche-a-manches-longues-assise-sur-un-canape-rouge-1A8yP_5msac
 ---
 
 I’ve been on both sides of the table. An interview is a certainly a stressful process, therefore it’s normal for people to behave in a way they wouldn’t normally. For some, an interview is a matter of paying rent or not, for some others, it’s much less critical. Either way, there’s a lot going on in a person’s mind during that process and it’s normal to make mistakes, but some of those are much harder to fix. I’ll outline some of the worst mistakes I’ve seen people do during interviews.

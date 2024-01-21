@@ -5,10 +5,12 @@ import {
   NarrowCenteredContainer,
   PageContainer,
 } from "@/components/Container";
-import { H1, Lead } from "@/components/Typography";
+import { H1, H3, Large, Lead, Small } from "@/components/Typography";
 import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
@@ -32,23 +34,69 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
             Back to Articles
           </Link>
         </Button>
-        <div className="grid grid-cols-4">
-          <div className="col-span-1">Y</div>
-          <div className="col-span-3">
-            <article>
-              <div className="pb-8 mb-8 border border-primary border-t-0 border-l-0 border-r-0">
-                <Lead>
-                  Hi, I'm <span className="font-bold">Dominic</span>. Here's my{" "}
-                  <span className="font-bold">vision</span>.
-                </Lead>
-                <H1>{post.title}</H1>
-                <time
-                  dateTime={post.date}
-                  className="mb-1 text-xs text-primary opacity-75"
-                >
-                  {format(parseISO(post.date), "LLLL d, yyyy")}
-                </time>
+        <div className="pb-8 mb-8 border border-primary border-t-0 border-l-0 border-r-0">
+          <Lead>
+            Hi, I'm <span className="font-bold">Dominic</span>. Here's my{" "}
+            <span className="font-bold">vision</span>.
+          </Lead>
+          <H1>{post.title}</H1>
+          <time
+            dateTime={post.date}
+            className="mb-1 text-xs text-primary opacity-75"
+          >
+            {format(parseISO(post.date), "LLLL d, yyyy")}
+          </time>
+        </div>
+        <div className="grid grid-cols-4 gap-16">
+          <div className="col-span-1 flex flex-col gap-8">
+            <div>
+              <Large>Categories</Large>
+              <div className="mt-2 flex flex-col gap-2">
+                <Badge variant="outline" className="w-fit">
+                  Management
+                </Badge>
+                <Badge variant="outline" className="w-fit">
+                  Collaboration
+                </Badge>
               </div>
+            </div>
+            <div>
+              <Large>Previous Article</Large>
+              <div className="mt-2 flex flex-col gap-2">
+                <a href="https://example.com">
+                  Interview Mistakes I've Seen People Do
+                </a>
+              </div>
+            </div>
+            <div>
+              <Large>Next Article</Large>
+              <div className="mt-2 flex flex-col gap-2">
+                <a href="https://example.com">
+                  My Idea of a Feature-rich Web App
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="col-span-3">
+            <div className="mb-8">
+              <Image
+                src={`/images/posts/${post.img}`}
+                alt={post.img_alt}
+                height={250}
+                width={1000}
+                className="shadow-lg rounded-lg"
+              />
+              <div className="mt-2">
+                <Small className="italic opacity-75">{post.img_alt}</Small>
+                &nbsp;•&nbsp;
+                <Small className="opacity-75">
+                  <Link href={post.img_src} target="_blank" rel="noreferrer">
+                    Source
+                  </Link>
+                </Small>
+              </div>
+            </div>
+            <article>
               <div
                 className="[&>*]:mb-3 [&>*:last-child]:mb-0"
                 dangerouslySetInnerHTML={{ __html: post.body.html }}

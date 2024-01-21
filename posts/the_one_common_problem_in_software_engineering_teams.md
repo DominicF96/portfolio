@@ -2,6 +2,9 @@
 title: The One Common Problem in Software Engineering Teams
 date: 2022-01-01
 excerpt: Communication — know the different challenges and how to address them.
+img: screaming_in_mic.webp
+img_alt: Child screaming in a microphone
+img_src: https://unsplash.com/fr/photos/garcon-chantant-sur-le-microphone-avec-filtre-anti-pop-ASKeuOZqhYU
 ---
 
 ___Communication — know the different challenges and how to address them___

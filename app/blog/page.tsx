@@ -47,7 +47,7 @@ function BlogPage({}: Props) {
   return (
     <PageContainer>
       <Hero locale={locales[0]} />
-      <CenteredContainer className="mt-16 grid gap-4 grid-flow-row grid-cols-4">
+      <CenteredContainer className="mt-16 grid gap-16 grid-flow-row grid-cols-4">
         <div className="col-span-1">
           <H3>Categories</H3>
           <div className="flex flex-col gap-2">
