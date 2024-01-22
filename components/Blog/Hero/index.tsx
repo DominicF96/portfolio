@@ -14,7 +14,6 @@ type Props = {
 
 function BlogHero({ locale }: Props) {
   const t = i18n[locale];
-  const router = useRouter();
   return (
     <CenteredContainer>
       <div className="relative z-40">

@@ -10,6 +10,7 @@ import { Button } from "../ui/button";
 import { ArrowRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import { CaseStudy } from "@/constants/case.studies";
 import "./index.css";
+import { dateFormat } from "@/utils/data";
 
 type Props = {
   caseData: CaseStudy;
@@ -22,9 +23,6 @@ function CaseStudyRow({ caseData, locale }: Props) {
   const [isHovered, setIsHovered] = useState(false);
 
   const date = new Date(caseData.date);
-  const dateFormat = new Intl.DateTimeFormat(`${locale}-CA`, {
-    dateStyle: "long",
-  });
 
   return (
     <Link
@@ -57,7 +55,7 @@ function CaseStudyRow({ caseData, locale }: Props) {
         <CenteredContainer>
           <H3>{t.cases[caseData.id as keyof typeof t.cases].title}</H3>
           <Muted>
-            <time>{dateFormat.format(date)}</time>
+            <time>{dateFormat(locale).format(date)}</time>
           </Muted>
           <div className="collapsible">
             <div className="transition-none">

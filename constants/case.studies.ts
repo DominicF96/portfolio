@@ -7,15 +7,20 @@ export interface CaseStudy {
 
 const caseStudies = [
   {
+    id: "dominicf96_portfolio_2024",
+    date: "2024-01-23",
+    score: 7,
+  },
+  {
     id: "streamingfast_substreams_registry",
     url: "https://substreams.dev",
-    date: "2024-02-01",
+    date: "2024-02-18",
     score: 7,
   },
   {
     id: "pinax_app",
     url: "https://app.pinax.network",
-    date: "2023-11-01",
+    date: "2023-11-18",
     score: 8,
   },
   {
@@ -45,6 +50,12 @@ const caseStudies = [
     id: "oreus_website",
     url: "https://oreus.ca",
     date: "2022-11-01",
+    score: 7,
+  },
+  {
+    id: "fanslab_webapp",
+    url: "https://fanslab.com",
+    date: "2020-07-20",
     score: 7,
   },
 ];

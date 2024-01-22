@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Toaster } from "./ui/sonner";
 
 type Props = {
   children: React.ReactNode;
@@ -18,6 +19,7 @@ function ClientProviders({ children }: Props) {
       disableTransitionOnChange
     >
       {children}
+      <Toaster />
     </ThemeProvider>
   );
 }

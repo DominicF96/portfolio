@@ -10,6 +10,13 @@ export const Post = defineDocumentType(() => ({
     img: { type: "string", required: true },
     img_alt: { type: "string", required: true },
     img_src: { type: "string", required: true },
+    locale: {
+      type: "enum",
+      options: ["en", "fr"],
+      default: "en",
+      required: true,
+    },
+    tags: { type: "list", of: { type: "string" }, required: true },
   },
   computedFields: {
     url: {
