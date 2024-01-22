@@ -4,16 +4,16 @@ import Hero from "@/components/Blog/Hero";
 import { locales } from "@/i18n.config";
 import { compareDesc } from "date-fns";
 import { allPosts } from "contentlayer/generated";
-import { H2, H3, Large } from "@/components/Typography";
-import { Input } from "@/components/ui/input";
+import { H2, Large } from "@/components/Typography";
 import { Button } from "@/components/ui/button";
-import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
-import { Badge } from "@/components/ui/badge";
 import PostRow from "@/components/Blog/Posts/PostRow";
 import PostsCategories from "@/components/Blog/Categories/PostsCategories";
 import BlogSearch from "@/components/Blog/Search";
+import metadata from "./metadata";
 
 type Props = {};
+
+export const generateMetadata = metadata;
 
 function BlogPage({}: Props) {
   const posts = allPosts.sort((a, b) =>

@@ -2,6 +2,8 @@ export interface I18n {
   title: string;
   see_case_study: string;
   open: string;
+  wip: string;
+  back: string;
   cases: {
     [key: string]: {
       title: string;
@@ -14,6 +16,8 @@ const en = {
   title: "Case Studies",
   see_case_study: "See Case Study",
   open: "Open",
+  wip: "Work in progress, check back soon!",
+  back: "Retour",
   cases: {
     dominicf96_portfolio_2024: {
       title: "Dominic Fournier • Portfolio & Blog 2024",
@@ -67,6 +71,8 @@ const fr = {
   title: "Études de cas",
   see_case_study: "Voir l'étude de cas",
   open: "Ouvrir",
+  wip: "En cours de rédaction, revenez bientôt!",
+  back: "Retour",
   cases: {
     dominicf96_portfolio_2024: {
       title: "Dominic Fournier • Portfolio & Blog 2024",

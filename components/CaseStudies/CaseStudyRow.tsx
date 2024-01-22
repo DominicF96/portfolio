@@ -59,7 +59,7 @@ function CaseStudyRow({ caseData, locale }: Props) {
           </Muted>
           <div className="collapsible">
             <div className="transition-none">
-              <P className="hidden md:block mt-4 md:max-w-[325px] lg:max-w-[450px] text-background">
+              <P className="mt-4 md:max-w-[325px] lg:max-w-[450px] text-background">
                 {t.cases[caseData.id as keyof typeof t.cases].description}
               </P>
               <div className="mt-8 flex flex-col md:flex-row gap-2">

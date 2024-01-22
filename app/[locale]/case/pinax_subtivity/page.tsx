@@ -1,12 +1,33 @@
+import i18n from "@/components/CaseStudies/i18n";
 import { CenteredContainer, PageContainer } from "@/components/Container";
+import { Button } from "@/components/ui/button";
+import { Locale } from "@/i18n.config";
+import { ArrowLeftIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 import React from "react";
 
-type Props = {};
+type Props = {
+  params: {
+    locale: Locale;
+  };
+};
 
-function CaseStudyPinaxSubtivityPage({}: Props) {
+function CaseStudyPinaxSubtivityPage({ params }: Props) {
+  const { locale } = params;
+  const t = i18n[locale];
   return (
     <PageContainer>
-      <CenteredContainer>CaseStudyPinaxSubtivityPage</CenteredContainer>
+      <CenteredContainer>
+        {t.wip}
+        <div className="mt-4">
+          <Button asChild>
+            <Link href="/">
+              <ArrowLeftIcon className="mr-2" />
+              {t.back}
+            </Link>
+          </Button>
+        </div>
+      </CenteredContainer>
     </PageContainer>
   );
 }

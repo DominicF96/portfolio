@@ -7,6 +7,7 @@ import ScrollCTA from "../../ScrollCTA";
 import { Locale } from "@/i18n.config";
 import HeroGraphic from "../../HeroGraphic";
 import i18n from "./i18n";
+import Image from "next/image";
 
 type Props = {
   locale: Locale;
@@ -28,7 +29,20 @@ function BlogHero({ locale }: Props) {
         </H1>
         <P className="mt-4 max-w-[465px]">{t.description}</P>
       </div>
-      {/* <HeroGraphic/> */}
+      <Image
+        src="/vectors/blog_graphic_desktop.svg"
+        width={500}
+        height={500}
+        alt="Blog Hero"
+        className="absolute hidden md:block md:right-20 lg:right-48 top-0"
+      />
+      <Image
+        src="/vectors/blog_graphic_mobile.svg"
+        width={200}
+        height={200}
+        alt="Blog Hero"
+        className="absolute md:hidden right-8 top-0 opacity-50"
+      />
     </CenteredContainer>
   );
 }
