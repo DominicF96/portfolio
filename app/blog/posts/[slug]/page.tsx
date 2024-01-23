@@ -63,7 +63,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
                   <PostCategories post={post} />
                 </div>
               </div>
-              <div>
+              {/* <div>
                 <Large>Previous Article</Large>
                 <div className="mt-2 flex flex-col gap-2">
                   <a href="https://example.com">
@@ -78,7 +78,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
                     My Idea of a Feature-rich Web App
                   </a>
                 </div>
-              </div>
+              </div> */}
               {/* </div> */}
             </div>
             <div className="md:col-span-3">

@@ -122,7 +122,12 @@ html {
   background: #fff;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
 }
 
@@ -154,4 +159,30 @@ h5 {
 h6 {
   font-size: 1rem;
   padding: 1rem 0;
+}
+
+#scroll_finger {
+  animation: scroll_finger 2s ease-in-out infinite;
+}
+
+@keyframes scroll_finger {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    transform: Translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  85% {
+    transform: Translate(16px, -32px) rotate(15deg);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: Translate(16px, -32px) rotate(15deg);
+  }
+}
+
+article p {
+  opacity: 0.9;
 }

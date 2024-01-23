@@ -2,14 +2,6 @@
   animation: slideRightToLeft 200s infinite linear;
 }
 
-.sliding-text-rtl:hover {
-  animation-play-state: paused;
-}
-
-.sliding-text-ltr:hover {
-  animation-play-state: paused;
-}
-
 .sliding-text-ltr {
   animation: slideLeftToRight 200s infinite linear;
 }

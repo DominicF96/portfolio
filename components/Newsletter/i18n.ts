@@ -15,21 +15,25 @@ const en = {
     "Interested in what I do? Subscribe to my newsletter to receive a monthly summary of my recent work.",
   placeholder: "Email",
   action: "Subscribe",
+  success: "You are now subscribed to my newsletter!",
   error: {
     email_invalid: "Please enter a valid email address.",
     email_required: "Please enter an email address.",
+    subscribe: "An error occurred. Please try again later.",
   },
 };
 
 const fr = {
   title: "Restez informé",
   description:
-    "Vous êtes intéressé par ce que je fais? Abonnez-vous à ma newsletter pour recevoir un résumé mensuel de mes travaux récents.",
-  placeholder: "Email",
+    "Vous êtes intéressé par ce que je fais? Abonnez-vous à mon infolettre pour recevoir un résumé mensuel de mes travaux récents.",
+  placeholder: "Courriel",
   action: "S'abonner",
+  success: "Vous êtes maintenant abonné à mon infolettre!",
   error: {
-    email_invalid: "Veuillez saisir une adresse e-mail valide.",
-    email_required: "Veuillez saisir une adresse e-mail.",
+    email_invalid: "Veuillez saisir une adresse courriel valide.",
+    email_required: "Veuillez saisir une adresse courriel.",
+    subscribe: "Une erreur est survenue. Veuillez réessayer plus tard.",
   },
 };
 

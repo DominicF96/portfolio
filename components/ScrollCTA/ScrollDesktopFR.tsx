@@ -2,13 +2,14 @@ import React from "react";
 
 type Props = {};
 
-function ScrollFR({}: Props) {
+function ScrollDesktopFR({}: Props) {
   return (
     <svg
       width="120"
       height="120"
       viewBox="0 0 500 500"
       fill="none"
+      className="hidden md:block"
     >
       <g id="circle_spin">
         <path
@@ -103,4 +104,4 @@ function ScrollFR({}: Props) {
   );
 }
 
-export default ScrollFR;
+export default ScrollDesktopFR;

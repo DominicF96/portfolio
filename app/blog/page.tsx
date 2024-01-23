@@ -23,32 +23,33 @@ function BlogPage({}: Props) {
   return (
     <PageContainer>
       <Hero locale={locales[0]} />
-      <CenteredContainer className="mt-16 md:grid md:gap-16 md:grid-flow-row md:grid-cols-4">
-        <div className="hidden md:block col-span-1">
+      {/* <CenteredContainer className="mt-16 md:grid md:gap-16 md:grid-flow-row md:grid-cols-4"> */}
+      <CenteredContainer className="mt-16">
+        {/* <div className="hidden md:block col-span-1">
           <Large>Categories</Large>
           <div className="mt-4 flex flex-col gap-2">
             <PostsCategories posts={allPosts} />
           </div>
-        </div>
-        <div className="col-span-3">
-          <H2>Articles</H2>
-          <BlogSearch />
+        </div> */}
+        {/* <div className="col-span-3"> */}
+        <H2 className="pb-0">Articles</H2>
+        {/* <BlogSearch />
           <div className="mt-2 flex gap-2">
             <Button>Best</Button>
             <Button variant="outline">Most Recent</Button>
+          </div> */}
+        {/* <div className="md:hidden">
+          <Large>Categories</Large>
+          <div className="mt-4 flex md:flex-col flex-wrap gap-2">
+            <PostsCategories posts={allPosts} />
           </div>
-          <div className="md:hidden mt-4">
-            <Large>Categories</Large>
-            <div className="mt-4 flex md:flex-col flex-wrap gap-2">
-              <PostsCategories posts={allPosts} />
-            </div>
-          </div>
-          <div className="mt-4 md:mt-8">
-            {posts.map((post, idx) => (
-              <PostRow key={idx} post={post} />
-            ))}
-          </div>
+        </div> */}
+        <div className="mt-4 md:mt-8">
+          {posts.map((post, idx) => (
+            <PostRow key={idx} post={post} />
+          ))}
         </div>
+        {/* </div> */}
       </CenteredContainer>
     </PageContainer>
   );

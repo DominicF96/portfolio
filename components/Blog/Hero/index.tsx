@@ -22,7 +22,7 @@ function BlogHero({ locale }: Props) {
           {t.flavor.part_1}&nbsp;
           <span className="font-bold">{t.flavor.part_2}</span>.&nbsp;
         </Lead>
-        <H1 className="font-black">
+        <H1 className="pt-0 font-black">
           {t.title.part_1}
           <br />
           <span className="text-primary">{t.title.part_2}</span>

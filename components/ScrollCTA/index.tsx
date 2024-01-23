@@ -1,7 +1,9 @@
 import React from "react";
-import { Locale, locales } from "@/i18n.config";
-import ScrollEN from "./ScrollEN";
-import ScrollFR from "./ScrollFR";
+import { Locale } from "@/i18n.config";
+import ScrollDesktopEN from "./ScrollDesktopEN";
+import ScrollDesktopFR from "./ScrollDesktopFR";
+import ScrollMobileFR from "./ScrollMobileFR";
+import ScrollMobileEN from "./ScrollMobileEN";
 type Props = {
   locale: Locale;
   className?: string;
@@ -11,9 +13,19 @@ function ScrollCTA({ locale, className }: Props) {
   const LocaleScrollSVG = () => {
     switch (locale) {
       case "fr":
-        return <ScrollFR />;
+        return (
+          <>
+            <ScrollDesktopFR />
+            <ScrollMobileFR />
+          </>
+        );
       default:
-        return <ScrollEN />;
+        return (
+          <>
+            <ScrollDesktopEN />
+            <ScrollMobileEN />
+          </>
+        );
     }
   };
 
