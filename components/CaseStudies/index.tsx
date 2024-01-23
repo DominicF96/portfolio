@@ -18,13 +18,15 @@ function CaseStudies({ locale }: Props) {
         <H2 id="case_studies">{t.title}</H2>
       </CenteredContainer>
       <div className="mt-16">
-        {caseStudies.map((caseStudy) => (
-          <CaseStudyRow
-            key={caseStudy.id}
-            locale={locale}
-            caseData={caseStudy}
-          />
-        ))}
+        {caseStudies
+          .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+          .map((caseStudy) => (
+            <CaseStudyRow
+              key={caseStudy.id}
+              locale={locale}
+              caseData={caseStudy}
+            />
+          ))}
       </div>
     </div>
   );
