@@ -10,7 +10,7 @@ import { Button } from "../ui/button";
 import { ArrowRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import { CaseStudy } from "@/constants/case.studies";
 import "./index.css";
-import { dateFormat } from "@/utils/data";
+import { format, parseISO } from "date-fns";
 
 type Props = {
   caseData: CaseStudy;
@@ -55,7 +55,7 @@ function CaseStudyRow({ caseData, locale }: Props) {
         <CenteredContainer>
           <H3>{t.cases[caseData.id as keyof typeof t.cases].title}</H3>
           <Muted>
-            <time>{dateFormat(locale).format(date)}</time>
+            <time>{format(parseISO(caseData.date), "LLLL d, yyyy")}</time>
           </Muted>
           <div className="collapsible">
             <div className="transition-none">

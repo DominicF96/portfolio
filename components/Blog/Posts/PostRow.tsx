@@ -3,10 +3,9 @@ import React from "react";
 import { Post } from "@/.contentlayer/generated";
 import Link from "next/link";
 import { H3, Muted, P } from "@/components/Typography";
-import { dateFormat } from "@/utils/data";
-import { Badge } from "@/components/ui/badge";
 import PostCategories from "../Categories";
 import Image from "next/image";
+import { format, parseISO } from "date-fns";
 
 type Props = {
   post: Post;
@@ -30,7 +29,7 @@ function PostRow({ post }: Props) {
           <div className="md:col-span-4">
             <H3 className="pb-0">{post.title}</H3>
             <Muted>
-              <time>{dateFormat("en").format(new Date(post.date))}</time>
+              <time>{format(parseISO(post.date), "LLLL d, yyyy")}</time>
             </Muted>
             <P className="opacity-90">{post.excerpt}</P>
             <div className="mt-4 flex gap-2">

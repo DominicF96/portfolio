@@ -49,7 +49,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
               Hi, I&apos;m <span className="font-bold">Dominic</span>.
               Here&apos;s my <span className="font-bold">vision</span>.
             </Lead>
-            <H1 className="pb-0 pt-0">{post.title}</H1>
+            <H1 className="pb-2 pt-0">{post.title}</H1>
             <time dateTime={post.date} className="mb-1 text-xs opacity-75">
               {format(parseISO(post.date), "LLLL d, yyyy")}
             </time>
