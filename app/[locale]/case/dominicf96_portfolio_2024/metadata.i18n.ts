@@ -20,7 +20,7 @@ export const en = {
 export const fr = {
   title: "Dominic | CS • Portfolio 2024",
   description:
-    "Bonjour, je m'appelle Dominic. J'écris sur la stratégie de produit, l'expérience utilisateur, le design et le développement frontend. Suivez-moi dans mon parcours pour devenir Product Owner.",
+    "Bonjour, je m'appelle Dominic. Dans cette étude de cas, je partagerai avec vous mes principales leçons dans la construction de mon portfolio et blog personnel.",
   keywords:
     "Case Study, Portfolio, Dominic, Fournier, Développeur, Designer, Product Owner",
 };

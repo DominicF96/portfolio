@@ -21,7 +21,7 @@ export const en = {
 export const fr = {
   title: "Dominic | CS • Spyglass",
   description:
-    "Bonjour, je m'appelle Dominic. J'écris sur la stratégie de produit, l'expérience utilisateur, le design et le développement frontend. Suivez-moi dans mon parcours pour devenir Product Owner.",
+    "Bonjour, je m'appelle Dominic. Dans cette étude de cas, je partagerai avec vous mes principales leçons dans la construction de la plateforme Spyglass Lost Transactions.",
   keywords:
     "Case Study, Spyglass, web3, Lost, Blockchain, Transactions, Traces, Dominic, Fournier, Développeur, Designer, Product Owner",
 };

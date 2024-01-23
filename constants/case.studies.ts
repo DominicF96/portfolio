@@ -53,10 +53,16 @@ const caseStudies = [
     score: 7,
   },
   {
+    id: "oreus_balance_website",
+    url: "https://balance.oreus.dominicfournier.com",
+    date: "2021-07-01",
+    score: 6,
+  },
+  {
     id: "fanslab_webapp",
     url: "https://fanslab.com",
     date: "2020-07-20",
-    score: 7,
+    score: 6,
   },
 ];
 

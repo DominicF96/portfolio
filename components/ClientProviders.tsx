@@ -2,6 +2,7 @@
 import React from "react";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Toaster } from "./ui/sonner";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 type Props = {
   children: React.ReactNode;
@@ -18,6 +19,7 @@ function ClientProviders({ children }: Props) {
       enableSystem
       disableTransitionOnChange
     >
+      <GoogleAnalytics trackPageViews />
       {children}
       <Toaster />
     </ThemeProvider>

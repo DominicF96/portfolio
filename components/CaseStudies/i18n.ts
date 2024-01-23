@@ -54,6 +54,11 @@ const en = {
       description:
         "Oreus is a web product development consulting company that I co-founded in 2021.",
     },
+    oreus_balance_website: {
+      title: "Oreus • Balance",
+      description:
+        "Oreus Balance is my first fully designed project. It was planned to be the first Oreus product, a personal finance web application.",
+    },
     streamingfast_substreams_registry: {
       title: "StreamingFast • Substreams Registry",
       description:
@@ -105,9 +110,14 @@ const fr = {
         "Spyglass est un explorateur traces de transactions décentralisées. Une trace de transaction permet de suivre une tentative de transaction sur la Blockchain, avant qu'elle ne soit validée.",
     },
     oreus_website: {
-      title: "Oreus",
+      title: "Oreus • Website",
       description:
         "Oreus est une entreprise de services-conseils en développement de produits web que j'ai co-fondé en 2021.",
+    },
+    oreus_balance_website: {
+      title: "Oreus • Balance",
+      description:
+        "Oreus Balance est mon premier projet entièrement conçu. Il était prévu pour être le premier produit Oreus, une application web de gestion de finances personnelles.",
     },
     streamingfast_substreams_registry: {
       title: "StreamingFast • Registre Substreams",
