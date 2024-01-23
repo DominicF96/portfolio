@@ -16,6 +16,11 @@ export default function generateMetadata({
     title: t[locale].title,
     description: t[locale].description,
     keywords: t[locale].keywords,
+    metadataBase: new URL(
+      process.env.NODE_ENV === "production"
+        ? "https://dominicfournier.com"
+        : "http://localhost:3000"
+    ),
     openGraph: {
       siteName: "Dominic Fournier",
       type: "website",
