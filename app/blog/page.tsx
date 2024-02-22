@@ -1,7 +1,8 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import { CenteredContainer, PageContainer } from "@/components/Container";
 import Hero from "@/components/Blog/Hero";
-import { locales } from "@/i18n.config";
+import { defaultLocale, locales } from "@/i18n.config";
 import { compareDesc } from "date-fns";
 import { allPosts } from "contentlayer/generated";
 import { H2, Large } from "@/components/Typography";
@@ -10,15 +11,30 @@ import PostRow from "@/components/Blog/Posts/PostRow";
 import PostsCategories from "@/components/Blog/Categories/PostsCategories";
 import BlogSearch from "@/components/Blog/Search";
 import metadata from "./metadata";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 type Props = {};
 
-export const generateMetadata = metadata;
+// export const generateMetadata = metadata;
 
 function BlogPage({}: Props) {
   const posts = allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date))
   );
+
+  // Contentlayer doesn't play well under dynamic urls,
+  // so we can't use the usual middleware-powered localization
+  // strategy. Instead, we'll use query parameters and filter
+  // the posts array. 
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const current = new URLSearchParams(Array.from(searchParams.entries()));
+  if (current.get("locale") === null) {
+    current.set("locale", defaultLocale);
+    const newUrl = `${pathname}?${current.toString()}`;
+    router.push(newUrl);
+  }
 
   return (
     <PageContainer>

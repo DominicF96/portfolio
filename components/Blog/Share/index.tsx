@@ -22,8 +22,8 @@ function SharePost({ post }: Props) {
 
   return (
     <div className="flex gap-2 mt-2">
-      <Button asChild>
-        <Link href="" target="_blank">
+      {/* <Button asChild>
+        <Link href={} target="_blank">
           <LinkedInLogoIcon />
         </Link>
       </Button>
@@ -31,7 +31,7 @@ function SharePost({ post }: Props) {
         <Link href="" target="_blank">
           <TwitterLogoIcon />
         </Link>
-      </Button>
+      </Button> */}
       <Button variant="link" onClick={() => copyUrl()}>
         <Share1Icon />
       </Button>
