@@ -15,6 +15,7 @@ import { Locale } from "@/i18n.config";
 import i18n from "./i18n";
 import { CenteredContainer } from "../Container";
 import Socials from "../Socials";
+import injectLocaleIfBlog from "@/utils/links";
 
 type Props = {
   locale: Locale;
@@ -78,7 +79,7 @@ function NavbarMobileDrawer({ locale, isOpen }: NavbarMobileDrawerProps) {
       <ul className="flex flex-col gap-2">
         {navbarLinks.map((link) => (
           <li key={link.key}>
-            <Link href={link.url}>
+            <Link href={injectLocaleIfBlog(link.url, locale)}>
               <Button
                 className="-ml-4 rounded-l-none"
                 variant="ghost"
@@ -112,6 +113,7 @@ type NavbarDesktopLinksProps = {
 
 function NavbarDesktopLinks({ locale }: NavbarDesktopLinksProps) {
   const t = i18n[locale];
+
   return (
     <div className="hidden md:block ml-8 w-full">
       <ul className="flex justify-between">
@@ -119,7 +121,7 @@ function NavbarDesktopLinks({ locale }: NavbarDesktopLinksProps) {
           <ul className="flex">
             {navbarLinks.map((link) => (
               <li key={link.key}>
-                <Link href={link.url}>
+                <Link href={injectLocaleIfBlog(link.url, locale)}>
                   <Button variant="ghost">
                     {t[link.key as keyof typeof t]}
                   </Button>
