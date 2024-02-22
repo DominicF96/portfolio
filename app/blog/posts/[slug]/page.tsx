@@ -94,9 +94,17 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
                   <Small className="italic opacity-75">{post.img_alt}</Small>
                   &nbsp;•&nbsp;
                   <Small className="opacity-75">
-                    <Link href={post.img_src} target="_blank" rel="noreferrer">
-                      Source
-                    </Link>
+                    {post.img_src.indexOf("http") !== -1 ? (
+                      <Link
+                        href={post.img_src}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Source
+                      </Link>
+                    ) : (
+                      post.img_src
+                    )}
                   </Small>
                 </div>
               </div>
