@@ -19,6 +19,16 @@ const en = {
   wip: "Work in progress, check back soon!",
   back: "Retour",
   cases: {
+    quickdocs_website: {
+      title: "QuickDocs • Website",
+      description:
+        "Quickdocs' website is a document management platform for professionals that I plan, design and develop entirely. The project started in February 2024.",
+    },
+    quickdocs_blog: {
+      title: "QuickDocs • Blog",
+      description:
+        "Quickdocs's blog, the platform for managing professional documents that I develop since February 2024.",
+    },
     dominicf96_portfolio_2024: {
       title: "Dominic Fournier • Portfolio & Blog 2024",
       description:
@@ -79,6 +89,16 @@ const fr = {
   wip: "En cours de rédaction, revenez bientôt!",
   back: "Retour",
   cases: {
+    quickdocs_website: {
+      title: "QuickDocs • Site Web",
+      description:
+        "Le site web de Quickdocs est une plateforme de gestion de documents pour professionnels que je conçoit en entier. Le projet a démarré en février 2024.",
+    },
+    quickdocs_blog: {
+      title: "QuickDocs • Blogue",
+      description:
+        "Le blog de Quickdocs, la plateforme de gestion de gestion de documents professionnels que je conçoit depuis février 2024.",
+    },
     dominicf96_portfolio_2024: {
       title: "Dominic Fournier • Portfolio & Blog 2024",
       description:
