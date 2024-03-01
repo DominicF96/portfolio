@@ -7,6 +7,18 @@ export interface CaseStudy {
 
 const caseStudies = [
   {
+    id: "quickdocs_website",
+    url: "https://quickdocs.ca",
+    date: "2024-02-29",
+    score: 6,
+  },
+  {
+    id: "quickdocs_blog",
+    url: "https://blog.quickdocs.ca",
+    date: "2024-02-29",
+    score: 6,
+  },
+  {
     id: "dominicf96_portfolio_2024",
     date: "2024-01-23",
     score: 7,

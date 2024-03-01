@@ -12,6 +12,8 @@ tags:
   - Management
 ---
 
+___I've interviewed a few people and had to choose the best candidates for a software engineering role. Here are some of the mistakes I've seen people do and how to avoid them.___
+
 I’ve been on both sides of the table. An interview is a certainly a stressful process, therefore it’s normal for people to behave in a way they wouldn’t normally. For some, an interview is a matter of paying rent or not, for some others, it’s much less critical. Either way, there’s a lot going on in a person’s mind during that process and it’s normal to make mistakes, but some of those are much harder to fix. I’ll outline some of the worst mistakes I’ve seen people do during interviews.
 
 
@@ -69,3 +71,5 @@ A job is a mutually beneficial relationship. Both parties should be able to thri
 For you, of course, it’s the perfect time to discuss the tasks that you dislike, the salary, and potential promotions. For them, making sure you’re happy and productive will help them get more value from your time.
 
 Thanks for reading!
+
+~ Dominic F.

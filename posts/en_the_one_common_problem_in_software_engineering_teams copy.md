@@ -100,3 +100,5 @@ People have ideas. Everyone. So naturally, there will be as many visions as ther
 should communicate their goal clearly and precisely periodically to ensure everyone is and stays on the same page.
 
 Anyways, that was my beautiful rant on communication. Let me know what you think!
+
+~ Dominic F.

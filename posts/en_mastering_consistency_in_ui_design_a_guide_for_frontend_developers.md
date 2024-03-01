@@ -1,5 +1,5 @@
 ---
-title: Mastering Consistency in UI Design - A Guide for Frontend Developers
+title: Mastering Consistency in UI Design • A Guide for Frontend Developers
 date: 2024-02-22
 img: consistent_ui.webp
 img_alt: Image of different tablet-like devices displaying consistent user interfaces
@@ -11,6 +11,8 @@ tags:
   - Design
   - Frontend Development
 ---
+
+___Let's explore strategies to ensure consistency in the UIs we build as frontend developers.___
 
 As Frontend developers, our role extends beyond writing functional code; we should produce understandable, consistent UIs. Since users perceive quality and experience our products through our UIs, it is crucial for us to be critical judges of what is acceptable and what isn't. Sometimes we're lucky enough to work with designers, other times we have to make these decisions ourselves. In either case, it's essential to understand the importance of consistency in UI design and how to achieve it effectively.
 
@@ -44,7 +46,7 @@ While it's not a design system, [Tailwind](https://tailwindcss.com) is also wort
 
 ### Follow a Grid System
 
-Implementing a grid system provides structure and alignment to your UI elements. Consistent spacing and alignment enhance readability and create a visually pleasing layout. Tools like [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) and [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) are invaluable for building responsive and consistent designs. 
+Implementing a grid system provides structure and alignment to your UI elements. Consistent spacing and alignment enhance readability and create a visually pleasing layout. Tools like [Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) and [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) are invaluable for building responsive and consistent designs. 
 
 
 ### Responsive Design
@@ -67,4 +69,8 @@ Browser inconsistencies can pose challenges to frontend developers. Regularly te
 Finally, code review adds another layer of verification, simply by having another pair of eyes looking at your code. It's also a great way to share knowledge and learn from others.
 
 
-In conclusion, consistency in UI design is crucial for creating a user-friendly experience. As frontend developers, we play a significant role in ensuring that our UIs are consistent and predictable. By following the strategies outlined in this article, you can achieve a more consistent and user-friendly UI. 
+In conclusion, consistency in UI design is crucial for creating a user-friendly experience. As frontend developers, we play a significant role in ensuring that our UIs are consistent and predictable. By following the strategies outlined in this article, you can achieve a more consistent and user-friendly UI.
+
+Thanks for reading!
+
+~ Dominic F.

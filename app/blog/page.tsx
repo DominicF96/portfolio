@@ -4,7 +4,7 @@ import { CenteredContainer, PageContainer } from "@/components/Container";
 import Hero from "@/components/Blog/Hero";
 import { defaultLocale, locales } from "@/i18n.config";
 import { compareDesc } from "date-fns";
-import { allPosts } from "contentlayer/generated";
+import { Post, allPosts } from "contentlayer/generated";
 import { H2, Large } from "@/components/Typography";
 import { Button } from "@/components/ui/button";
 import PostRow from "@/components/Blog/Posts/PostRow";
@@ -25,15 +25,20 @@ function BlogPage({}: Props) {
   // Contentlayer doesn't play well under dynamic urls,
   // so we can't use the usual middleware-powered localization
   // strategy. Instead, we'll use query parameters and filter
-  // the posts array. 
+  // the posts array.
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const current = new URLSearchParams(Array.from(searchParams.entries()));
-  if (current.get("locale") === null) {
+  const locale = current.get("locale");
+  if (!locale) {
     current.set("locale", defaultLocale);
     const newUrl = `${pathname}?${current.toString()}`;
     router.push(newUrl);
+  }
+
+  if (!locale) {
+    return null;
   }
 
   return (
@@ -61,9 +66,11 @@ function BlogPage({}: Props) {
           </div>
         </div> */}
         <div className="mt-4 md:mt-8">
-          {posts.map((post, idx) => (
-            <PostRow key={idx} post={post} />
-          ))}
+          {posts
+            .filter((post: Post) => post.locale === current.get("locale"))
+            .map((post, idx) => (
+              <PostRow key={idx} post={post} />
+            ))}
         </div>
         {/* </div> */}
       </CenteredContainer>
