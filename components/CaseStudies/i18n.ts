@@ -20,12 +20,12 @@ const en = {
   back: "Retour",
   cases: {
     quickdocs_website: {
-      title: "QuickDocs • Website",
+      title: "QuickDocs • Website (WIP)",
       description:
         "Quickdocs' website is a document management platform for professionals that I plan, design and develop entirely. The project started in February 2024.",
     },
     quickdocs_blog: {
-      title: "QuickDocs • Blog",
+      title: "QuickDocs • Blog (WIP)",
       description:
         "Quickdocs's blog, the platform for managing professional documents that I develop since February 2024.",
     },
@@ -35,7 +35,7 @@ const en = {
         "You are Here! This is the 3rd version of my personal portfolio. Built with Next.js and Tailwind CSS, it is also much more representative of my current skills.",
     },
     pinax_app: {
-      title: "Pinax • Web Platform",
+      title: "Pinax • Web Platform (WIP)",
       description:
         "Pinax's cloud services platform allows users to access various decentralized services, such as RPC endpoints, Firehose, and Substreams.",
     },
@@ -70,7 +70,7 @@ const en = {
         "Oreus Balance is my first fully designed project. It was planned to be the first Oreus product, a personal finance web application.",
     },
     streamingfast_substreams_registry: {
-      title: "StreamingFast • Substreams Registry",
+      title: "StreamingFast • Substreams Registry (WIP)",
       description:
         "StreamingFast's Substreams Registry allows users to access an inventory of Substreams packages to extract data from the Blockchain in a modular way.",
     },
@@ -90,12 +90,12 @@ const fr = {
   back: "Retour",
   cases: {
     quickdocs_website: {
-      title: "QuickDocs • Site Web",
+      title: "QuickDocs • Site Web (WIP)",
       description:
         "Le site web de Quickdocs est une plateforme de gestion de documents pour professionnels que je conçoit en entier. Le projet a démarré en février 2024.",
     },
     quickdocs_blog: {
-      title: "QuickDocs • Blogue",
+      title: "QuickDocs • Blogue (WIP)",
       description:
         "Le blog de Quickdocs, la plateforme de gestion de gestion de documents professionnels que je conçoit depuis février 2024.",
     },
@@ -105,7 +105,7 @@ const fr = {
         "Vous êtes ici! Il s'agit de la 3e version de mon portfolio personnel. Construit avec Next.js et Tailwind CSS, il est également beaucoup plus représentatif de mes compétences actuelles.",
     },
     pinax_app: {
-      title: "Pinax • Plateforme Web",
+      title: "Pinax • Plateforme Web (WIP)",
       description:
         "La plateforme web de Pinax permet à ses utilisateurs d'accéder à différents services décentralisés, tels que des points d'accès RPC, Firehose et Substreams.",
     },
@@ -140,7 +140,7 @@ const fr = {
         "Oreus Balance est mon premier projet entièrement conçu. Il était prévu pour être le premier produit Oreus, une application web de gestion de finances personnelles.",
     },
     streamingfast_substreams_registry: {
-      title: "StreamingFast • Registre Substreams",
+      title: "StreamingFast • Registre Substreams (WIP)",
       description:
         "Le registre des Substreams de StreamingFast permet à ses utilisateurs d'accéder à un inventaire de paquets Substreams permettant d'extraire des données de la Blockchain de façon modulaire.",
     },
