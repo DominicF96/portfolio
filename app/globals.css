@@ -40,7 +40,7 @@ html {
 
 @layer base {
   :root {
-    --background: 133 50% 7%;
+    --background: 0 0% 6%;
     --foreground: 0 0% 100%;
 
     --card: 0 0% 100%;
@@ -49,8 +49,8 @@ html {
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
 
-    --primary: 132 53% 62%;
-    --primary-foreground: 133 50% 7%;
+    --primary: 160 60% 60%;
+    --primary-foreground: 160 60% 6%;
 
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;

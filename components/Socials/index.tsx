@@ -15,11 +15,11 @@ type Props = {
 const SocialsLogoMap = (social: string) => {
   switch (social) {
     case "github":
-      return <GitHubLogoIcon color="#69D17E" height={24} width={24} />;
+      return <GitHubLogoIcon color="#5cd6ad" height={24} width={24} />;
     case "linkedin":
-      return <LinkedInLogoIcon color="#69D17E" height={24} width={24} />;
+      return <LinkedInLogoIcon color="#5cd6ad" height={24} width={24} />;
     case "twitter":
-      return <TwitterLogoIcon color="#69D17E" height={24} width={24} />;
+      return <TwitterLogoIcon color="#5cd6ad" height={24} width={24} />;
     default:
       return null;
   }
