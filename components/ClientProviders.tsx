@@ -19,7 +19,9 @@ function ClientProviders({ children }: Props) {
       enableSystem
       disableTransitionOnChange
     >
-      <GoogleAnalytics trackPageViews />
+      {process.env.NODE_ENV === "production" && (
+        <GoogleAnalytics trackPageViews />
+      )}
       {children}
       <Toaster />
     </ThemeProvider>
