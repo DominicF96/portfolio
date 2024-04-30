@@ -45,7 +45,7 @@ const fr = {
     "Développeur avec de l'expérience en Design et Product Ownership, je me spécialise dans la coordination d'équipes agiles multidisciplinaires pour construire des tableaux de bord sensationnels et riches en fonctionnalités.",
   cta: {
     primary: "Études de cas",
-    secondary: "Blog (anglais seulement)",
+    secondary: "Blog",
   }
 };
 

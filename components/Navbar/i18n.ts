@@ -18,7 +18,7 @@ const fr = {
   home: "Accueil",
   case_study: "Études de cas",
   dashboard_template: "Modèle de tableau de bord",
-  blog: "Blog (anglais seulement)",
+  blog: "Blog",
   contact: "Contactez-moi",
 };
 
