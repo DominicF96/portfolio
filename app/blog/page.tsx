@@ -1,16 +1,12 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import { CenteredContainer, PageContainer } from "@/components/Container";
 import Hero from "@/components/Blog/Hero";
-import { defaultLocale, locales } from "@/i18n.config";
+import { defaultLocale, Locale, locales } from "@/i18n.config";
 import { compareDesc } from "date-fns";
 import { Post, allPosts } from "contentlayer/generated";
-import { H2, Large } from "@/components/Typography";
-import { Button } from "@/components/ui/button";
+import { H2 } from "@/components/Typography";
 import PostRow from "@/components/Blog/Posts/PostRow";
-import PostsCategories from "@/components/Blog/Categories/PostsCategories";
-import BlogSearch from "@/components/Blog/Search";
-import metadata from "./metadata";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 type Props = {};
@@ -30,7 +26,7 @@ function BlogPage({}: Props) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const current = new URLSearchParams(Array.from(searchParams.entries()));
-  const locale = current.get("locale");
+  const locale = current.get("locale") as Locale;
   if (!locale) {
     current.set("locale", defaultLocale);
     const newUrl = `${pathname}?${current.toString()}`;
@@ -43,7 +39,7 @@ function BlogPage({}: Props) {
 
   return (
     <PageContainer>
-      <Hero locale={locales[0]} />
+      <Hero locale={locale} />
       {/* <CenteredContainer className="mt-16 md:grid md:gap-16 md:grid-flow-row md:grid-cols-4"> */}
       <CenteredContainer className="mt-16">
         {/* <div className="hidden md:block col-span-1">

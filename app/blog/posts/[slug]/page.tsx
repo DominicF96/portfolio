@@ -5,7 +5,6 @@ import { H1, Large, Lead, Small } from "@/components/Typography";
 import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import SharePost from "@/components/Blog/Share";
 import PostCategories from "@/components/Blog/Categories";

@@ -1,18 +1,37 @@
+"use client";
 import React from "react";
 import Navbar from "@/components/Navbar";
-import { Locale, locales } from "@/i18n.config";
+import { defaultLocale, Locale, locales } from "@/i18n.config";
 import Footer from "@/components/Footer";
 import Newsletter from "@/components/Newsletter";
 import Image from "next/image";
+import { usePathname, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 type Props = {
   children: React.ReactNode;
 };
 
 function LocalizedLayout({ children }: Props) {
+
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const current = new URLSearchParams(Array.from(searchParams.entries()));
+  const locale = current.get("locale") as Locale;
+  if (!locale) {
+    current.set("locale", defaultLocale);
+    const newUrl = `${pathname}?${current.toString()}`;
+    router.push(newUrl);
+  }
+
+  if (!locale) {
+    return null;
+  }
+
   return (
     <div>
-      <Navbar locale={locales[0]} />
+      <Navbar locale={locale} />
       <Image
         src="/vectors/bg.svg"
         height={1200}
@@ -22,8 +41,8 @@ function LocalizedLayout({ children }: Props) {
         style={{ animationDuration: "30s" }}
       />
       {children}
-      <Newsletter locale={locales[0]} />
-      <Footer locale={locales[0]} />
+      <Newsletter locale={locale} />
+      <Footer locale={locale} />
     </div>
   );
 }
