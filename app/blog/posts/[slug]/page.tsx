@@ -115,27 +115,25 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
                   dangerouslySetInnerHTML={{ __html: post.body.html }}
                 />
               </article>
-              <div className="mt-8">
-                <Link href="/" className="flex items-center">
-                  <Avatar className="inline-block mr-4 h-11 w-11">
-                    <AvatarImage
-                      src="https://avatars.githubusercontent.com/u/36671850?v=4"
-                      alt="@DominicF96"
-                    />
-                    <AvatarFallback
-                      className="bg-primary text-primary-foreground font-bold"
-                      style={{ fontFamily: "Poppins" }}
-                    >
-                      DF
-                    </AvatarFallback>
-                  </Avatar>
-                  <span
-                    className="whitespace-nowrap"
-                    style={{ fontSize: "20px" }}
+              <div className="mt-8 flex items-center">
+                <Avatar className="inline-block mr-4 h-11 w-11">
+                  <AvatarImage
+                    src="https://avatars.githubusercontent.com/u/36671850?v=4"
+                    alt="@DominicF96"
+                  />
+                  <AvatarFallback
+                    className="bg-primary text-primary-foreground font-bold"
+                    style={{ fontFamily: "Poppins" }}
                   >
-                    Dominic Fournier
-                  </span>
-                </Link>
+                    DF
+                  </AvatarFallback>
+                </Avatar>
+                <span
+                  className="whitespace-nowrap"
+                  style={{ fontSize: "20px" }}
+                >
+                  Dominic Fournier
+                </span>
               </div>
               <div className="mt-16">
                 <Large>Discuss & Share</Large>
