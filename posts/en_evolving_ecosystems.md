@@ -13,7 +13,8 @@ tags:
   - Open-Source
 ---
 
-___Big companies use interconnected ecosystems to boost innovation and keep users loyal. By engaging users and fostering collaboration, they drive growth and create dynamic digital communities.
+___
+Big companies use interconnected ecosystems to boost innovation and keep users loyal. By engaging users and fostering collaboration, they drive growth and create dynamic digital communities.
 ___
 
 ## What are Ecosystems
@@ -82,6 +83,5 @@ Reward programs not only benefit individual users but also contribute to the ove
 
 By fostering community-led ecosystems, companies can tap into the collective potential of their user base, drive innovation, and create sustainable competitive advantages in the rapidly evolving business landscape.
 
-Thanks for reading!
 
-~ Dominic F.
+Thanks for reading!

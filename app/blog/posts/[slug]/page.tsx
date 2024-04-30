@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import SharePost from "@/components/Blog/Share";
 import PostCategories from "@/components/Blog/Categories";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
@@ -114,6 +115,26 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
                   dangerouslySetInnerHTML={{ __html: post.body.html }}
                 />
               </article>
+              <Link href="/" className="flex items-center">
+                <Avatar className="inline-block mr-4 h-11 w-11">
+                  <AvatarImage
+                    src="https://avatars.githubusercontent.com/u/36671850?v=4"
+                    alt="@DominicF96"
+                  />
+                  <AvatarFallback
+                    className="bg-primary text-primary-foreground font-bold"
+                    style={{ fontFamily: "Poppins" }}
+                  >
+                    DF
+                  </AvatarFallback>
+                </Avatar>
+                <span
+                  className="whitespace-nowrap"
+                  style={{ fontSize: "20px" }}
+                >
+                  Dominic Fournier
+                </span>
+              </Link>
               <div className="mt-16">
                 <Large>Discuss & Share</Large>
                 <SharePost post={post} />

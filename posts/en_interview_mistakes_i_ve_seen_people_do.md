@@ -70,6 +70,5 @@ A job is a mutually beneficial relationship. Both parties should be able to thri
 
 For you, of course, it’s the perfect time to discuss the tasks that you dislike, the salary, and potential promotions. For them, making sure you’re happy and productive will help them get more value from your time.
 
-Thanks for reading!
 
-~ Dominic F.
+Thanks for reading!

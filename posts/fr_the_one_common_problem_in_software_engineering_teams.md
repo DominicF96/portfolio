@@ -77,6 +77,5 @@ Particulièrement dans les start-ups où vous n'avez pas d'expert pour tout, la 
 
 Les gens ont des idées. Tout le monde. Donc, naturellement, il y aura autant de visions qu'il y a de personnes au sein d'une entreprise. La direction devrait communiquer clairement et précisément son objectif périodiquement pour s'assurer que tout le monde est et reste sur la même page.
 
-Merci de me lire!
 
-~ Dominic F.
+Merci de me lire!

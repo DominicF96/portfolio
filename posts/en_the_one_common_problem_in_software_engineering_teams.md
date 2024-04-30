@@ -99,6 +99,5 @@ That can:
 People have ideas. Everyone. So naturally, there will be as many visions as there are people within a company. The leadership
 should communicate their goal clearly and precisely periodically to ensure everyone is and stays on the same page.
 
-Anyways, that was my beautiful rant on communication. Let me know what you think!
 
-~ Dominic F.
+Anyways, that was my beautiful rant on communication. Let me know what you think!

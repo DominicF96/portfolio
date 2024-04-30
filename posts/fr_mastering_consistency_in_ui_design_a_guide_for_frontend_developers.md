@@ -71,6 +71,5 @@ Enfin, la revue de code ajoute une autre couche de vérification, simplement en 
 
 En conclusion, la cohérence dans la conception d'UI est cruciale pour créer une expérience utilisateur conviviale. En tant que développeurs Frontend, nous jouons un rôle significatif dans l'assurance que nos UI sont cohérentes et prévisibles. En suivant les stratégies décrites dans cet article, vous pouvez atteindre une UI plus cohérente et conviviale.
 
-Merci de me lire !
 
-~ Dominic F.
+Merci de me lire !

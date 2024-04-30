@@ -76,5 +76,3 @@ Pour vous, bien sûr, c'est le moment idéal pour discuter des tâches que vous 
 
 
 Bonne chance pour votre prochaine entrevue !
-
-~ Dominic F.

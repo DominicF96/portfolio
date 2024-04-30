@@ -71,6 +71,5 @@ Finally, code review adds another layer of verification, simply by having anothe
 
 In conclusion, consistency in UI design is crucial for creating a user-friendly experience. As frontend developers, we play a significant role in ensuring that our UIs are consistent and predictable. By following the strategies outlined in this article, you can achieve a more consistent and user-friendly UI.
 
-Thanks for reading!
 
-~ Dominic F.
+Thanks for reading!
