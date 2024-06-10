@@ -123,6 +123,7 @@ function CaseStudyRow({ caseData, locale }: Props) {
                   src={`/images/cases/${caseData.id}.png`}
                   width={500}
                   height={400}
+                  className={`transition-opacity ${isInView ? "opacity-100" : "opacity-50"}`}
                   alt={t.cases[caseData.id as keyof typeof t.cases].title}
                 />
               </div>
