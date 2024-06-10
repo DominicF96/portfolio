@@ -41,7 +41,7 @@ function Hero({ locale }: Props) {
             size="lg"
             className="w-fit"
             variant="outline"
-            onClick={() => router.push("/blog")}
+            onClick={() => router.push("https://blog.dominicfournier.com")}
           >
             {t.cta.secondary}
           </Button>
