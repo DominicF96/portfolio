@@ -100,7 +100,7 @@ function NavbarMobileDrawer({ locale, isOpen }: NavbarMobileDrawerProps) {
           <Socials />
         </li>
         <li>
-          <Link href="mailto:hello@dominicfournier.com" className="w-full">
+          <Link href="mailto:contact@dominicfournier.com" className="w-full">
             <Button className="w-full mt-4" size="lg">
               {t.contact}
             </Button>
@@ -140,7 +140,7 @@ function NavbarDesktopLinks({ locale }: NavbarDesktopLinksProps) {
               <Socials />
             </li>
             <li>
-              <Link href="mailto:hello@dominicfournier.com">
+              <Link href="mailto:contact@dominicfournier.com">
                 <Button className="ml-4">{t.contact}</Button>
               </Link>
             </li>
