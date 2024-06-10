@@ -65,6 +65,11 @@ function CaseStudyRow({ caseData, locale }: Props) {
     gridTemplateRows: "1fr",
   };
 
+  const dateLocalMap = {
+    en: "en-US",
+    fr: "fr-CA",
+  };
+
   // Adjust className and style based on isInView instead of hover
   return (
     <div
@@ -98,7 +103,9 @@ function CaseStudyRow({ caseData, locale }: Props) {
         <CenteredContainer>
           <H3>{t.cases[caseData.id as keyof typeof t.cases].title}</H3>
           <span>
-            <time>{format(parseISO(caseData.date), "LLLL d, yyyy")}</time>
+            <time>
+              {new Date(caseData.date).toLocaleDateString(dateLocalMap[locale])}
+            </time>
           </span>
           <div
             style={
@@ -112,12 +119,12 @@ function CaseStudyRow({ caseData, locale }: Props) {
                 {t.cases[caseData.id as keyof typeof t.cases].description}
               </P>
               <div className="my-8 border border-primary max-h-[600px] overflow-hidden rounded-lg shadow-2xl pointer-events-none block lg:hidden">
-              <Image
-                src={`/images/cases/${caseData.id}.png`}
-                width={500}
-                height={400}
-                alt={t.cases[caseData.id as keyof typeof t.cases].title}
-              />
+                <Image
+                  src={`/images/cases/${caseData.id}.png`}
+                  width={500}
+                  height={400}
+                  alt={t.cases[caseData.id as keyof typeof t.cases].title}
+                />
               </div>
               <div className="mt-8 flex flex-col md:flex-row gap-2">
                 <Button variant="outline" className={`shadow-none`} asChild>
