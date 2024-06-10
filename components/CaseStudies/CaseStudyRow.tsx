@@ -10,6 +10,7 @@ import { Button } from "../ui/button";
 import { ArrowRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import { CaseStudy } from "@/constants/case.studies";
 import { format, parseISO } from "date-fns";
+import { enUS, frCA } from "date-fns/locale";
 import "./index.css";
 
 type Props = {
@@ -66,8 +67,8 @@ function CaseStudyRow({ caseData, locale }: Props) {
   };
 
   const dateLocalMap = {
-    en: "en-US",
-    fr: "fr-CA",
+    en: enUS,
+    fr: frCA,
   };
 
   // Adjust className and style based on isInView instead of hover
@@ -104,7 +105,9 @@ function CaseStudyRow({ caseData, locale }: Props) {
           <H3>{t.cases[caseData.id as keyof typeof t.cases].title}</H3>
           <span>
             <time>
-              {new Date(caseData.date).toLocaleDateString(dateLocalMap[locale])}
+              {format(parseISO(caseData.date), "PPP", {
+                locale: dateLocalMap[locale],
+              })}
             </time>
           </span>
           <div
@@ -123,7 +126,9 @@ function CaseStudyRow({ caseData, locale }: Props) {
                   src={`/images/cases/${caseData.id}.png`}
                   width={500}
                   height={400}
-                  className={`transition-opacity ${isInView ? "opacity-100" : "opacity-50"}`}
+                  className={`transition-all duration-500 w-full ${
+                    isInView ? "brightness-100" : "brightness-50"
+                  }`}
                   alt={t.cases[caseData.id as keyof typeof t.cases].title}
                 />
               </div>
