@@ -13,6 +13,7 @@ export interface I18n {
     secondary: string;
     tertiary: string;
   }
+  trusted_by: string;
 }
 
 const en = {
@@ -29,7 +30,8 @@ const en = {
   cta: {
     primary: "Case Studies",
     secondary: "Blog",
-  }
+  },
+  trusted_by: "Trusted by",
 };
 
 const fr = {
@@ -46,7 +48,8 @@ const fr = {
   cta: {
     primary: "Études de cas",
     secondary: "Blog",
-  }
+  },
+  trusted_by: "Ils me font confiance",
 };
 
 export default { en, fr };

@@ -24,7 +24,11 @@ type Props = {
 function Navbar({ locale }: Props) {
   const [isOpen, setOpen] = useState(false);
   return (
-    <nav className="fixed w-full z-50 m-auto bg-background/80 py-4 backdrop-blur-md">
+    <nav
+      className={`fixed w-full z-[60] m-auto py-4 backdrop-blur-md transition-colors ${
+        isOpen ? "bg-background" : "bg-background/80"
+      }`}
+    >
       <CenteredContainer className="flex items-center">
         <Link href="/" className="flex items-center">
           <Avatar className="inline-block mr-4 h-11 w-11">
@@ -71,9 +75,9 @@ function NavbarMobileDrawer({ locale, isOpen }: NavbarMobileDrawerProps) {
   const t = i18n[locale];
   return (
     <div
-      className={`fixed top-[76px] transition-all	duration-500 ${
+      className={`fixed z-50 w-full md:hidden top-[76px] min-h-[100vh] bg-background flex flex-col justify-between transition-all duration-500 py-24 pt-8 px-4 md:p-8 ${
         isOpen ? "-left-0" : "left-full"
-      } w-full bg-background md:hidden z-50 py-24 px-4 md:p-8 flex flex-col justify-between`}
+      }`}
       style={{ height: "calc(100% - 76px)" }}
     >
       <ul className="flex flex-col gap-2">

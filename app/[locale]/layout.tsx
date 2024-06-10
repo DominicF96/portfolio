@@ -17,17 +17,19 @@ function LocalizedLayout({ params, children }: Props) {
   return (
     <div>
       <Navbar locale={locale} />
-      <Image
-        src="/vectors/bg.svg"
-        height={1200}
-        width={1200}
-        alt=""
-        className="fixed z-0 -top-96 -right-96 blur-[200px] animate-spin"
-        style={{ animationDuration: "30s" }}
-      />
-      {children}
-      <Newsletter locale={locale} />
-      <Footer locale={locale} />
+      <div className="relative z-30">
+        <Image
+          src="/vectors/bg.svg"
+          height={1200}
+          width={1200}
+          alt=""
+          className="fixed z-0 -top-96 -right-96 blur-[200px] animate-spin"
+          style={{ animationDuration: "30s" }}
+        />
+        {children}
+        <Newsletter locale={locale} />
+        <Footer locale={locale} />
+      </div>
     </div>
   );
 }

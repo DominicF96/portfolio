@@ -67,8 +67,8 @@ function ScrollDesktopEN({}: Props) {
         <path
           d="M470.152 250.599C470.152 279.49 464.461 308.098 453.405 334.791C442.349 361.483 426.143 385.736 405.714 406.165C385.285 426.594 361.032 442.8 334.34 453.856C307.648 464.912 279.039 470.603 250.148 470.603C221.256 470.603 192.648 464.912 165.956 453.856C139.264 442.8 115.011 426.594 94.5815 406.165C74.1522 385.736 57.9468 361.483 46.8906 334.791C35.8344 308.098 30.1438 279.49 30.1438 250.599"
           stroke="white"
-          stroke-width="8"
-          stroke-linecap="round"
+          strokeWidth="8"
+          strokeLinecap="round"
         />
       </g>
       <rect
@@ -78,7 +78,7 @@ function ScrollDesktopEN({}: Props) {
         height="184"
         rx="51.4365"
         stroke="white"
-        stroke-width="8"
+        strokeWidth="8"
       />
       <rect
         x="237.923"
@@ -87,7 +87,7 @@ function ScrollDesktopEN({}: Props) {
         height="48.1955"
         rx="12.2254"
         stroke="white"
-        stroke-width="8"
+        strokeWidth="8"
         fill="white"
         id="opacity-breathe"
       />
@@ -98,7 +98,7 @@ function ScrollDesktopEN({}: Props) {
         height="48.1955"
         rx="12.2254"
         stroke="white"
-        stroke-width="8"
+        strokeWidth="8"
       />
     </svg>
   );
