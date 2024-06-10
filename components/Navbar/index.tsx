@@ -24,7 +24,7 @@ type Props = {
 function Navbar({ locale }: Props) {
   const [isOpen, setOpen] = useState(false);
   return (
-    <nav className="fixed w-full z-50 m-auto bg-background/80 py-4">
+    <nav className="fixed w-full z-50 m-auto bg-background/80 py-4 backdrop-blur-md">
       <CenteredContainer className="flex items-center">
         <Link href="/" className="flex items-center">
           <Avatar className="inline-block mr-4 h-11 w-11">
