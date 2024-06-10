@@ -7,22 +7,28 @@ export interface CaseStudy {
 
 const caseStudies = [
   {
-    id: "quickdocs_website",
-    url: "https://quickdocs.ca",
-    date: "2024-02-29",
-    score: 6,
+    id: "anthony_king_website",
+    url: "https://dev.anthonyking.ca",
+    date: "2024-05-10",
+    score: 8,
   },
-  {
-    id: "quickdocs_blog",
-    url: "https://blog.quickdocs.ca",
-    date: "2024-02-29",
-    score: 6,
-  },
-  {
-    id: "dominicf96_portfolio_2024",
-    date: "2024-01-23",
-    score: 7,
-  },
+  // {
+  //   id: "quickdocs_website",
+  //   url: "https://quickdocs.ca",
+  //   date: "2024-02-29",
+  //   score: 6,
+  // },
+  // {
+  //   id: "quickdocs_blog",
+  //   url: "https://blog.quickdocs.ca",
+  //   date: "2024-02-29",
+  //   score: 6,
+  // },
+  // {
+  //   id: "dominicf96_portfolio_2024",
+  //   date: "2024-01-23",
+  //   score: 7,
+  // },
   {
     id: "streamingfast_substreams_registry",
     url: "https://substreams.dev",
@@ -38,13 +44,13 @@ const caseStudies = [
   {
     id: "eosnation_ens",
     url: "https://eosnameservice.io",
-    date: "2023-08-01",
+    date: "2023-05-01",
     score: 6,
   },
   {
     id: "pinax_website",
     url: "https://pinax.network",
-    date: "2023-05-01",
+    date: "2023-08-01",
     score: 6,
   },
   // {

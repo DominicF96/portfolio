@@ -19,16 +19,21 @@ const en = {
   wip: "Work in progress, check back soon!",
   back: "Retour",
   cases: {
-    quickdocs_website: {
-      title: "QuickDocs • Website (WIP)",
+    anthony_king_website: {
+      title: "Anthony King • Website (WIP)",
       description:
-        "Quickdocs' website is a document management platform for professionals that I plan, design and develop entirely. The project started in February 2024.",
+        "Anthony King is a Mortgage Broker and financial planner in the Greater Montreal Area.",
     },
-    quickdocs_blog: {
-      title: "QuickDocs • Blog (WIP)",
-      description:
-        "Quickdocs's blog, the platform for managing professional documents that I develop since February 2024.",
-    },
+    // quickdocs_website: {
+    //   title: "QuickDocs • Website (WIP)",
+    //   description:
+    //     "Quickdocs' website is a document management platform for professionals that I plan, design and develop entirely. The project started in February 2024.",
+    // },
+    // quickdocs_blog: {
+    //   title: "QuickDocs • Blog (WIP)",
+    //   description:
+    //     "Quickdocs's blog, the platform for managing professional documents that I develop since February 2024.",
+    // },
     dominicf96_portfolio_2024: {
       title: "Dominic Fournier • Portfolio & Blog 2024",
       description:
@@ -45,7 +50,7 @@ const en = {
         "EOS Nation's name service allows users to associate domain names with EOSIO wallet addresses.",
     },
     pinax_website: {
-      title: "Pinax • Website",
+      title: "Pinax • Website (WIP)",
       description:
         "Pinax's website showcases the various services offered by the company.",
     },
@@ -60,7 +65,7 @@ const en = {
         "Spyglass is a decentralized transaction traces explorer. A transaction trace allows you to follow a transaction attempt on the Blockchain, before it is validated.",
     },
     oreus_website: {
-      title: "Oreus",
+      title: "Oreus • Website",
       description:
         "Oreus is a web product development consulting company that I co-founded in 2021.",
     },
@@ -70,7 +75,7 @@ const en = {
         "Oreus Balance is my first fully designed project. It was planned to be the first Oreus product, a personal finance web application.",
     },
     streamingfast_substreams_registry: {
-      title: "StreamingFast • Substreams Registry (WIP)",
+      title: "StreamingFast • Substreams Registry",
       description:
         "StreamingFast's Substreams Registry allows users to access an inventory of Substreams packages to extract data from the Blockchain in a modular way.",
     },
@@ -89,23 +94,28 @@ const fr = {
   wip: "En cours de rédaction, revenez bientôt!",
   back: "Retour",
   cases: {
-    quickdocs_website: {
-      title: "QuickDocs • Site Web (WIP)",
+    anthony_king_website: {
+      title: "Anthony King • Site Web (En cours)",
       description:
-        "Le site web de Quickdocs est une plateforme de gestion de documents pour professionnels que je conçoit en entier. Le projet a démarré en février 2024.",
+        "Anthony King est un courtier hypothécaire et planificateur financier dans la région du Grand Montréal.",
     },
-    quickdocs_blog: {
-      title: "QuickDocs • Blogue (WIP)",
-      description:
-        "Le blog de Quickdocs, la plateforme de gestion de gestion de documents professionnels que je conçoit depuis février 2024.",
-    },
+    // quickdocs_website: {
+    //   title: "QuickDocs • Site Web (WIP)",
+    //   description:
+    //     "Le site web de Quickdocs est une plateforme de gestion de documents pour professionnels que je conçoit en entier. Le projet a démarré en février 2024.",
+    // },
+    // quickdocs_blog: {
+    //   title: "QuickDocs • Blogue (WIP)",
+    //   description:
+    //     "Le blog de Quickdocs, la plateforme de gestion de gestion de documents professionnels que je conçoit depuis février 2024.",
+    // },
     dominicf96_portfolio_2024: {
       title: "Dominic Fournier • Portfolio & Blog 2024",
       description:
         "Vous êtes ici! Il s'agit de la 3e version de mon portfolio personnel. Construit avec Next.js et Tailwind CSS, il est également beaucoup plus représentatif de mes compétences actuelles.",
     },
     pinax_app: {
-      title: "Pinax • Plateforme Web (WIP)",
+      title: "Pinax • Plateforme Web (En cours)",
       description:
         "La plateforme web de Pinax permet à ses utilisateurs d'accéder à différents services décentralisés, tels que des points d'accès RPC, Firehose et Substreams.",
     },
@@ -130,7 +140,7 @@ const fr = {
         "Spyglass est un explorateur traces de transactions décentralisées. Une trace de transaction permet de suivre une tentative de transaction sur la Blockchain, avant qu'elle ne soit validée.",
     },
     oreus_website: {
-      title: "Oreus • Website",
+      title: "Oreus • Site Web",
       description:
         "Oreus est une entreprise de services-conseils en développement de produits web que j'ai co-fondé en 2021.",
     },
@@ -140,7 +150,7 @@ const fr = {
         "Oreus Balance est mon premier projet entièrement conçu. Il était prévu pour être le premier produit Oreus, une application web de gestion de finances personnelles.",
     },
     streamingfast_substreams_registry: {
-      title: "StreamingFast • Registre Substreams (WIP)",
+      title: "StreamingFast • Registre Substreams",
       description:
         "Le registre des Substreams de StreamingFast permet à ses utilisateurs d'accéder à un inventaire de paquets Substreams permettant d'extraire des données de la Blockchain de façon modulaire.",
     },
