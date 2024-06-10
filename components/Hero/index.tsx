@@ -50,7 +50,7 @@ function Hero({ locale }: Props) {
           </Button>
         </div>
       </div>
-      <div className="mt-24">
+      <div className="mt-24 md:pr-24">
         {/* <Small>{t.trusted_by}</Small> */}
         <Slideshow
           className="hidden md:block mt-4 relative z-0"

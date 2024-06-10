@@ -3,9 +3,7 @@ import SlidingBanner from "@/components/SlidingBanner";
 import { Locale } from "@/i18n.config";
 import metadata from "./metadata";
 import CaseStudies from "@/components/CaseStudies";
-import { CenteredContainer, PageContainer } from "@/components/Container";
-import Slideshow from "@/components/Slideshow/Slideshow";
-import PARTNERS from "@/constants/partners";
+import { PageContainer } from "@/components/Container";
 
 type HomePageProps = {
   params: {
