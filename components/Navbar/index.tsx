@@ -97,7 +97,7 @@ function NavbarMobileDrawer({ locale, isOpen }: NavbarMobileDrawerProps) {
       </ul>
       <ul className="flex flex-col gap-2 ">
         <li>
-          <Socials />
+          <Socials locale={locale} />
         </li>
         <li>
           <Link href="mailto:contact@dominicfournier.com" className="w-full">
@@ -137,7 +137,7 @@ function NavbarDesktopLinks({ locale }: NavbarDesktopLinksProps) {
         <li>
           <ul className="flex items-center">
             <li>
-              <Socials />
+              <Socials locale={locale} />
             </li>
             <li>
               <Link href="mailto:contact@dominicfournier.com">

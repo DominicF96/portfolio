@@ -7,9 +7,12 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
 import socials from "@/constants/socials";
+import { FileTextIcon } from "lucide-react";
+import { Locale } from "@/i18n.config";
 
 type Props = {
   className?: string;
+  locale?: Locale;
 };
 
 const SocialsLogoMap = (social: string) => {
@@ -25,7 +28,7 @@ const SocialsLogoMap = (social: string) => {
   }
 };
 
-function Socials({ className }: Props) {
+function Socials({ className, locale }: Props) {
   return (
     <ul className={`flex gap-2 ${className || ""}`}>
       {socials.map((social) => (
@@ -37,6 +40,13 @@ function Socials({ className }: Props) {
           </Link>
         </li>
       ))}
+      <li>
+        <Link href={`/${locale}/files/Dominic_Fournier.pdf`} download={`Dominic_Fournier_${locale}.pdf`} target="_blank">
+          <Button variant="link" className="px-2" aria-label="CV / Resume">
+            <FileTextIcon color="#5cd6ad" height={24} width={24} />
+          </Button>
+        </Link>
+      </li>
     </ul>
   );
 }
