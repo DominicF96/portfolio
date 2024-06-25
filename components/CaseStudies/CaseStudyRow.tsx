@@ -85,11 +85,11 @@ function CaseStudyRow({ caseData, locale }: Props) {
             isInView ? "opacity-100 top-16" : "opacity-0 top-24"
           }`}
         >
-          <div className="border border-primary max-h-[600px] overflow-hidden rounded-lg shadow-2xl pointer-events-none hidden lg:block">
+          <div className="fixed top-64 right-24 border border-primary max-h-[800px] overflow-hidden rounded-lg shadow-2xl pointer-events-none hidden lg:block">
             <Image
               src={`/images/cases/${caseData.id}.png`}
-              width={500}
-              height={400}
+              width={600}
+              height={800}
               alt={t.cases[caseData.id as keyof typeof t.cases].title}
             />
           </div>
