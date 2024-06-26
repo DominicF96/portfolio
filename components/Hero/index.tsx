@@ -31,7 +31,7 @@ function Hero({ locale }: Props) {
           <br />
           <span className="text-primary">{t.title.part_2}</span>
         </H1>
-        <P className="mt-4 max-w-[465px]">{t.description}</P>
+        <P className="mt-4 max-w-[465px]">{t.description(new Date().getFullYear() - 2017)}</P>
         <div className="flex flex-col sm:flex-row gap-4 mt-12">
           <Button
             size="lg"

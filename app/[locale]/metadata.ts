@@ -14,7 +14,7 @@ export default function generateMetadata({
 
   return {
     title: t[locale].title,
-    description: t[locale].description,
+    description: t[locale].description(new Date().getFullYear() - 2017),
     keywords: t[locale].keywords,
     metadataBase: new URL(
       process.env.NODE_ENV === "production"

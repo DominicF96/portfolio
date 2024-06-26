@@ -12,7 +12,7 @@ export interface I18n {
     primary: string;
     secondary: string;
     tertiary: string;
-  }
+  };
   trusted_by: string;
 }
 
@@ -25,8 +25,8 @@ const en = {
     part_1: "Product Designer,",
     part_2: "Frontend Developer",
   },
-  description:
-    "Developer with Design and Product Ownership experience, I specialize in coordinating multidisciplinary agile teams to build stunning, feature-rich Dashboards.",
+  description: (years: number | string) =>
+    `With over ${years} years of experience in Product Design and Frontend development, I specialize in coordinating Agile teams to build intuitive, feature-rich dashboards and websites.`,
   cta: {
     primary: "Case Studies",
     secondary: "Blog",
@@ -43,8 +43,8 @@ const fr = {
     part_1: "Designer Produit,",
     part_2: "Développeur Frontend",
   },
-  description:
-    "Développeur avec de l'expérience en Design et Product Ownership, je me spécialise dans la coordination d'équipes agiles multidisciplinaires pour construire des tableaux de bord sensationnels et riches en fonctionnalités.",
+  description: (years: number | string) =>
+    `Avec plus de ${years} ans d'expérience en design de produit et développement Frontend, je me spécialise dans la coordination d'équipes Agiles pour construire des tableaux de bord et des sites web intuitifs et riches en fonctionnalités.`,
   cta: {
     primary: "Études de cas",
     secondary: "Blog",

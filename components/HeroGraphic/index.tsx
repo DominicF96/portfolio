@@ -20,7 +20,7 @@ function HeroGraphic({ className }: Props) {
         width="300"
         height="300"
         alt="Dominic Fournier"
-        className="md:hidden block absolute z-30 right-4 -bottom-40 md:right-24 top-64 sm:top-36 md:-top-64 md:scale-150"
+        className="md:hidden block absolute z-30 right-4 -bottom-40 md:right-24 top-72 sm:top-36 md:-top-64 md:scale-150"
       />
     </div>
   );

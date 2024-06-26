@@ -97,7 +97,7 @@ function CaseStudyRow({ caseData, locale }: Props) {
       </CenteredContainer>
       <div
         className={`relative py-16 border border-primary border-l-0 border-r-0 ${
-          isInView ? "bg-primary/10" : ""
+          isInView ? "bg-primary/20" : ""
         }`}
         style={{ marginTop: "-1px" }}
       >
@@ -133,14 +133,14 @@ function CaseStudyRow({ caseData, locale }: Props) {
                 />
               </div>
               <div className="mt-8 flex flex-col md:flex-row gap-2">
-                <Button variant="outline" className={`shadow-none`} asChild>
+                {/* <Button variant="outline" className={`shadow-none`} asChild>
                   <Link href={`/case/${caseData.id}`}>
                     {t.see_case_study}
                     <ArrowRightIcon className="ml-4" />
                   </Link>
-                </Button>
+                </Button> */}
                 {caseData.url && (
-                  <Button asChild variant="ghost" className={`shadow-none`}>
+                  <Button asChild variant="outline" className={`shadow-none`}>
                     <Link
                       href={caseData.url}
                       target={"_blank"}

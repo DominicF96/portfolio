@@ -4,6 +4,7 @@ import { Locale } from "@/i18n.config";
 import metadata from "./metadata";
 import CaseStudies from "@/components/CaseStudies";
 import { PageContainer } from "@/components/Container";
+import ExtendedBio from "@/components/ExtendedBio";
 
 type HomePageProps = {
   params: {
@@ -17,6 +18,7 @@ export default function HomePage({ params }: HomePageProps) {
   return (
     <PageContainer>
       <Hero locale={locale} />
+      <ExtendedBio locale={locale} />
       <CaseStudies locale={locale} />
       <SlidingBanner locale={locale} className="mt-32 md:mt-48" />
     </PageContainer>
