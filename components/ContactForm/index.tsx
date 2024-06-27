@@ -25,8 +25,6 @@ import { Locale } from "@/i18n.config";
 import { Textarea } from "../ui/textarea";
 import { H1, Small } from "../Typography";
 import { CheckIcon, LoaderIcon, XCircleIcon } from "lucide-react";
-import { Switch } from "../ui/switch";
-import { Card } from "../ui/card";
 import { CenteredContainer } from "../Container";
 
 type Props = {
@@ -79,9 +77,9 @@ function ContactForm({ locale }: Props) {
   function onSubmit(values: z.infer<typeof formSchema>) {
     setLoading(true);
     setSentMessage(false);
-    if (values.newsletter) {
-      subscribe(values);
-    }
+    // if (values.newsletter) {
+    //   subscribe(values);
+    // }
 
     fetch("/api/contact", {
       method: "POST",
@@ -121,9 +119,9 @@ function ContactForm({ locale }: Props) {
     await fetch("/api/subscribe", {
       method: "POST",
       body: JSON.stringify({
-        email: values.email,
         firstName: values.firstname,
         lastName: values.lastname,
+        email: values.email,
         isContactForm: true,
         note: `[CONTACT FORM] User provided the following message: '${values.message}'.`,
       }),
@@ -148,7 +146,10 @@ function ContactForm({ locale }: Props) {
       <div className="flex flex-col md:flex-row gap-8">
         <H1 className="!text-[128px] max-w-[50%] text-primary">Get in touch</H1>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-full">
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="space-y-4 w-full"
+          >
             <FormField
               control={form.control}
               name="firstname"
@@ -257,7 +258,7 @@ function ContactForm({ locale }: Props) {
                 </FormItem>
               )}
             />
-            <FormField
+            {/* <FormField
               control={form.control}
               name="newsletter"
               render={({ field }) => (
@@ -274,7 +275,7 @@ function ContactForm({ locale }: Props) {
                   <FormMessage />
                 </FormItem>
               )}
-            />
+            /> */}
             {error ? (
               <div>
                 <Small className="text-destructive font-bold flex items-center">

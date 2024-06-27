@@ -100,7 +100,7 @@ export const en: I18n = {
   },
   submit: "Submit",
   submit_successful:
-    "Thank you for reaching out! We will get back to you shortly.",
+    "Thank you for reaching out! I will get back to you shortly.",
 };
 
 export const fr: I18n = {
@@ -154,5 +154,5 @@ export const fr: I18n = {
   },
   submit: "Soumettre",
   submit_successful:
-    "Merci de nous avoir contacté! Nous vous répondrons sous peu.",
+    "Merci de m'avoir contacté! Je vous répondrai sous peu.",
 };
