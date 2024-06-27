@@ -88,8 +88,8 @@ function CaseStudyRow({ caseData, locale }: Props) {
           <div className="fixed top-64 right-24 border border-primary max-h-[800px] overflow-hidden rounded-xl shadow-2xl pointer-events-none hidden lg:block">
             <Image
               src={`/images/cases/${caseData.id}.png`}
-              width={600}
-              height={800}
+              width={700}
+              height={1000}
               alt={t.cases[caseData.id as keyof typeof t.cases].title}
             />
           </div>

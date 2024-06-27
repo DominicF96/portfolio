@@ -15,7 +15,7 @@ type Props = {
 
 function Newsletter({ locale }: Props) {
   const t = i18n[locale];
-  const newsletterRef = useRef(null); // Ref for the newsletter div
+  const newsletterRef = useRef<HTMLDivElement>(null); // Ref for the newsletter div
   const [email, setEmail] = useState("");
   const emailRe =
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;

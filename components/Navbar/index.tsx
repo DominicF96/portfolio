@@ -63,7 +63,7 @@ function Navbar({ locale }: Props) {
         </Link>
         <Button
           variant="link"
-          className="md:hidden ml-auto pr-0 hover:px-4"
+          className="md:hidden ml-auto pr-0 hover:!pl-4 hover:!pr-4"
           onClick={() => setOpen(!isOpen)}
         >
           <Hamburger
