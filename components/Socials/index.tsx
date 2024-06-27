@@ -33,19 +33,28 @@ function Socials({ className, locale }: Props) {
     <ul className={`flex gap-2 ${className || ""}`}>
       {socials.map((social) => (
         <li key={social.name}>
-          <Link href={social.url} target="_blank">
-            <Button variant="link" className="px-2" aria-label="Github">
+          <Button variant="link" className="px-2" aria-label="Github" asChild>
+            <Link href={social.url} target="_blank">
               {SocialsLogoMap(social.name)}
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </li>
       ))}
       <li>
-        <Link href={`/${locale}/files/Dominic_Fournier.pdf`} download={`Dominic_Fournier_${locale}.pdf`} target="_blank">
-          <Button variant="link" className="px-2" aria-label="CV / Resume">
+        <Button
+          variant="link"
+          className="px-2"
+          aria-label="CV / Resume"
+          asChild
+        >
+          <Link
+            href={`/${locale}/files/Dominic_Fournier.pdf`}
+            download={`Dominic_Fournier_${locale}.pdf`}
+            target="_blank"
+          >
             <FileTextIcon color="#5cd6ad" height={24} width={24} />
-          </Button>
-        </Link>
+          </Link>
+        </Button>
       </li>
     </ul>
   );

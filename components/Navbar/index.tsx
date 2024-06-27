@@ -125,11 +125,11 @@ function NavbarDesktopLinks({ locale }: NavbarDesktopLinksProps) {
           <ul className="flex">
             {navbarLinks.map((link) => (
               <li key={link.key}>
-                <Link href={injectLocaleIfBlog(link.url, locale)}>
-                  <Button variant="ghost">
+                <Button variant="ghost" asChild>
+                  <Link href={injectLocaleIfBlog(link.url, locale)}>
                     {t[link.key as keyof typeof t]}
-                  </Button>
-                </Link>
+                  </Link>
+                </Button>
               </li>
             ))}
           </ul>
@@ -140,9 +140,11 @@ function NavbarDesktopLinks({ locale }: NavbarDesktopLinksProps) {
               <Socials locale={locale} />
             </li>
             <li>
-              <Link href="mailto:contact@dominicfournier.com">
-                <Button className="ml-4">{t.contact}</Button>
-              </Link>
+              <Button className="ml-4" asChild>
+                <Link href="mailto:contact@dominicfournier.com">
+                  {t.contact}
+                </Link>
+              </Button>
             </li>
           </ul>
         </li>

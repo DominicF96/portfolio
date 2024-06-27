@@ -75,6 +75,7 @@ function Newsletter({ locale }: Props) {
               placeholder={t.placeholder}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              className="border-background text-background placeholder:text-background placeholder:opacity-75 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background"
             />
             <Button
               disabled={!isEmailValid || !email || email.length <= 0}

@@ -4,6 +4,7 @@ import { Locale } from "@/i18n.config";
 import Footer from "@/components/Footer";
 import Newsletter from "@/components/Newsletter";
 import Image from "next/image";
+import ContactForm from "@/components/ContactForm";
 
 type Props = {
   params: {
@@ -28,6 +29,7 @@ function LocalizedLayout({ params, children }: Props) {
         />
         {children}
         <Newsletter locale={locale} />
+        <ContactForm locale={locale} />
         <Footer locale={locale} />
       </div>
     </div>
