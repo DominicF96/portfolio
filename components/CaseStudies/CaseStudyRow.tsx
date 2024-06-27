@@ -85,7 +85,7 @@ function CaseStudyRow({ caseData, locale }: Props) {
             isInView ? "opacity-100 top-16" : "opacity-0 top-24"
           }`}
         >
-          <div className="fixed top-64 right-24 border border-primary max-h-[800px] overflow-hidden rounded-lg shadow-2xl pointer-events-none hidden lg:block">
+          <div className="fixed top-64 right-24 border border-primary max-h-[800px] overflow-hidden rounded-xl shadow-2xl pointer-events-none hidden lg:block">
             <Image
               src={`/images/cases/${caseData.id}.png`}
               width={600}

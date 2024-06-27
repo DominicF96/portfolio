@@ -70,17 +70,17 @@ function Newsletter({ locale }: Props) {
         <div className="pt-64 sm:pt-56 pb-12 px-8 md:py-40 md:pb-24 lg:pt-32 md:px-24">
           <H2 className="font-extrabold">{t.title}</H2>
           <P className="text-lg md:max-w-[380px]">{t.description}</P>
-          <div className="mt-8 flex flex-col md:flex-row gap-2 md:max-w-[400px]">
+          <div className="mt-8 flex flex-row md:max-w-[400px]">
             <Input
               placeholder={t.placeholder}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="border-background text-background placeholder:text-background placeholder:opacity-75 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background"
+              className="border-background text-background placeholder:text-background placeholder:opacity-75 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background rounded-r-none"
             />
             <Button
               disabled={!isEmailValid || !email || email.length <= 0}
               onClick={handleEmailSubmit}
-              className="bg-background text-white hover:bg-white hover:text-background"
+              className="bg-background text-white hover:bg-white hover:text-background rounded-l-none"
             >
               {t.action}
             </Button>

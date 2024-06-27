@@ -143,7 +143,7 @@ function ContactForm({ locale }: Props) {
 
   return (
     <CenteredContainer>
-      <div className="flex flex-col md:flex-row gap-8">
+      <div className="flex flex-col md:flex-row justify-evenly gap-8">
         <H1
           id="contact"
           className="!text-[128px] !line-clamp-none overflow-visible h-fit max-w-[50%] text-primary"
@@ -153,7 +153,7 @@ function ContactForm({ locale }: Props) {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="space-y-4 w-full"
+            className="space-y-4 w-full max-w-[500px]"
           >
             <FormField
               control={form.control}
