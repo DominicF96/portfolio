@@ -8,6 +8,7 @@ import Image from "next/image";
 import { Locale } from "@/i18n.config";
 import i18n from "./i18n";
 import { toast } from "sonner";
+import { CheckCircle, CheckIcon, CircleX, CircleXIcon } from "lucide-react";
 
 type Props = {
   locale: Locale;
@@ -21,6 +22,8 @@ function Newsletter({ locale }: Props) {
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
   const isEmailValid = emailRe.test(email);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleEmailSubmit = async () => {
     if (isEmailValid) {
@@ -33,13 +36,27 @@ function Newsletter({ locale }: Props) {
         .then((res) => {
           if (res.status === 200) {
             toast.success(t.success);
+            setSuccess(true);
+            setError(false);
+            // Attempt to play success sound
+            const audio = new Audio("/sounds/success.mp3");
+            audio.volume = 0.2;
+            audio.play().catch((error) => {
+              console.error("Error playing sound:", error);
+            });
           } else {
             throw new Error("Unable to subscribe to newsletter");
           }
         })
         .catch((err) => {
+          setSuccess(false);
+          setError(true);
           console.error(err);
           toast.error(t.error.subscribe);
+          const audio = new Audio("/sounds/error.mp3");
+          audio.play().catch((error) => {
+            console.error("Error playing sound:", error);
+          });
         });
     }
   };
@@ -114,6 +131,11 @@ function Newsletter({ locale }: Props) {
               placeholder={t.placeholder}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && isEmailValid) {
+                  handleEmailSubmit();
+                }
+              }}
               className="border-background text-background placeholder:text-background placeholder:opacity-75 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-background rounded-r-none"
             />
             <Button
@@ -126,7 +148,20 @@ function Newsletter({ locale }: Props) {
           </div>
           {!isEmailValid && email && email.length > 0 && (
             <div className="pt-4">
+              <CircleXIcon height={18} width={18} className="inline mr-2" />
               <Small className="text-background">{t.error.email_invalid}</Small>
+            </div>
+          )}
+          {success && (
+            <div className="pt-4">
+              <CheckCircle height={18} width={18} className="inline mr-2" />
+              <Small className="text-background">{t.success}</Small>
+            </div>
+          )}
+          {error && (
+            <div className="pt-4">
+              <CircleXIcon height={18} width={18} className="inline mr-2" />
+              <Small className="text-background">{t.error.subscribe}</Small>
             </div>
           )}
         </div>

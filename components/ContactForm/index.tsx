@@ -26,6 +26,7 @@ import { Textarea } from "../ui/textarea";
 import { H1, Small } from "../Typography";
 import { CheckIcon, LoaderIcon, XCircleIcon } from "lucide-react";
 import { CenteredContainer } from "../Container";
+import { toast } from "sonner";
 
 type Props = {
   locale: Locale;
@@ -97,8 +98,19 @@ function ContactForm({ locale }: Props) {
           setSentMessage(true);
           setError(null);
           form.reset();
+          toast.success(t.submit_successful);
+          const audio = new Audio("/sounds/success.mp3");
+          audio.volume = 0.2;
+          audio.play().catch((error) => {
+            console.error("Error playing sound:", error);
+          });
         } else {
           setError("Unable to submit deletion request. Please try again.");
+          setSentMessage(false);
+          const audio = new Audio("/sounds/error.mp3");
+          audio.play().catch((error) => {
+            console.error("Error playing sound:", error);
+          });
         }
       })
       .catch((err) => {
@@ -107,6 +119,10 @@ function ContactForm({ locale }: Props) {
           `Unable to submit deletion request. Please try again., ${err}`
         );
         setSentMessage(false);
+        const audio = new Audio("/sounds/error.mp3");
+        audio.play().catch((error) => {
+          console.error("Error playing sound:", error);
+        });
       })
       .finally(() => setLoading(false));
     setLoading(false);
@@ -141,6 +157,12 @@ function ContactForm({ locale }: Props) {
       .finally(() => setLoadingSubscribe(false));
   };
 
+  const handleKeyPress = (event: React.KeyboardEvent) => {
+    if (event.key === "Enter") {
+      form.handleSubmit(onSubmit)(); // This triggers the form submission programmatically
+    }
+  };
+
   return (
     <CenteredContainer>
       <div className="relative flex flex-col md:flex-row justify-evenly gap-8 z-10">
@@ -152,6 +174,7 @@ function ContactForm({ locale }: Props) {
         </H1>
         <Form {...form}>
           <form
+            onKeyDown={handleKeyPress}
             onSubmit={form.handleSubmit(onSubmit)}
             className="space-y-4 w-full max-w-[500px]"
           >
@@ -284,7 +307,7 @@ function ContactForm({ locale }: Props) {
             {error ? (
               <div>
                 <Small className="text-destructive font-bold flex items-center">
-                  <XCircleIcon height={18} width={18} />
+                  <XCircleIcon height={18} width={18} className="mr-2" />
                   &nbsp;{t.errors.submit}
                 </Small>
               </div>
@@ -292,7 +315,7 @@ function ContactForm({ locale }: Props) {
             {sentMessage ? (
               <div>
                 <Small className="text-primary font-bold flex items-center">
-                  <CheckIcon height={18} width={18} />
+                  <CheckIcon height={18} width={18} className="mr-2" />
                   &nbsp;{t.submit_successful}
                 </Small>
               </div>
@@ -300,7 +323,7 @@ function ContactForm({ locale }: Props) {
             {subscribeRes === true ? (
               <div>
                 <Small className="text-primary font-bold flex items-center">
-                  <CheckIcon height={18} width={18} />
+                  <CheckIcon height={18} width={18} className="mr-2" />
                   &nbsp;{t.newsletter.tips.success}
                 </Small>
               </div>
@@ -308,7 +331,7 @@ function ContactForm({ locale }: Props) {
             {subscribeRes === false ? (
               <div>
                 <Small className="text-destructive font-bold flex items-center">
-                  <XCircleIcon height={18} width={18} />
+                  <XCircleIcon height={18} width={18} className="mr-2" />
                   &nbsp;{t.newsletter.tips.error}
                 </Small>
               </div>

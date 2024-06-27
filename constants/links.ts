@@ -4,9 +4,7 @@ export interface NavbarLink {
 }
 
 const navbarLinks = [
-  // { key: "home", url: "/" },
-  { key: "case_study", url: "/#case_studies" },
-  // { key: "dashboard_template", url: "/" },
+  { key: "home", url: "/" },
   { key: "blog", url: "https://blog.dominicfournier.com" },
 ];
 
