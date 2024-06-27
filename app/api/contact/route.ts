@@ -14,10 +14,19 @@ export async function POST(req: Request) {
     company: string;
     reason: string;
     message: string;
+    locale: string;
     requested_at: string;
   } = await req.json();
-  const { firstname, lastname, email, company, reason, message, requested_at } =
-    reqData;
+  const {
+    firstname,
+    lastname,
+    email,
+    company,
+    reason,
+    message,
+    locale,
+    requested_at,
+  } = reqData;
 
   if (!email) {
     console.log(`No email provided.`);
@@ -46,10 +55,11 @@ export async function POST(req: Request) {
           `Company: ${company}`,
           `Reason: ${reason}`,
           `Message: ${message}`,
+          `Locale: ${locale}`,
           `Request Time: ${requested_at}`,
           "Please follow up ASAP!\n",
           "Thanks!\n",
-          "~ YOUR FAVORITE BOT"
+          "~ YOUR FAVORITE BOT",
         ].join("\n"),
       },
     ],
