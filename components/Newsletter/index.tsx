@@ -81,7 +81,7 @@ function Newsletter({ locale }: Props) {
     <CenteredContainer>
       <div
         ref={newsletterRef}
-        className="relative mt-56 mb-32 bg-primary text-background rounded-xl"
+        className="relative z-10 mt-56 mb-32 bg-primary text-background rounded-xl"
       >
         <Image
           src="/vectors/envelope.svg"

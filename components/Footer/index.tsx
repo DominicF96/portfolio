@@ -11,7 +11,7 @@ type Props = {
 
 function Footer({ locale }: Props) {
   return (
-    <footer className="pt-16 pb-16">
+    <footer className="relative pt-16 pb-16 z-10">
       <CenteredContainer className="flex flex-col md:flex-row justify-start md:justify-between items-start md:items-center">
         <Copyrights locale={locale} />
         <div className="flex justify-start md:justify-end items-center pt-8 md:py-0">

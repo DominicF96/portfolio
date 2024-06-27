@@ -143,7 +143,7 @@ function ContactForm({ locale }: Props) {
 
   return (
     <CenteredContainer>
-      <div className="flex flex-col md:flex-row justify-evenly gap-8">
+      <div className="relative flex flex-col md:flex-row justify-evenly gap-8 z-10">
         <H1
           id="contact"
           className="!text-[128px] !line-clamp-none overflow-visible h-fit max-w-[50%] text-primary"

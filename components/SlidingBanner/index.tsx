@@ -21,7 +21,7 @@ function SlidingBanner({ locale, className }: Props) {
   };
 
   return (
-    <div className={className || ""}>
+    <div className={`${className || ""}`}>
       <div className="max-w-full overflow-hidden w-full font-bold whitespace-nowrap text-4xl md:text-8xl">
         <div className="bg-background border border-l-0 border-r-0 border-primary text-primary w-full py-8">
           <CenteredContainer className="sliding-text-ltr">
