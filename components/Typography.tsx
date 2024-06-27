@@ -11,9 +11,10 @@ export const H1 = (props: any) => {
   const [className, other] = extractProps(props);
   return (
     <h1
-      className={`scroll-m-20 text-4xl md:text-6xl font-extrabold tracking-tight ${
+      className={`scroll-m-20 text-4xl md:text-6xl font-extrabold tracking-wide ${
         props.className || ""
       }`}
+      style={{ lineHeight: "80%" }}
       {...other}
     />
   );
@@ -78,7 +79,9 @@ export const P = (props: any) => {
   const [className, other] = extractProps(props);
   return (
     <p
-      className={`leading-7 [&:not(:first-child)]:mt-6 ${props.className || ""}`}
+      className={`leading-7 [&:not(:first-child)]:mt-6 ${
+        props.className || ""
+      }`}
       {...other}
     />
   );
@@ -108,13 +111,18 @@ export const InlineCode = (props: any) => {
 
 export const Lead = (props: any) => {
   const [className, other] = extractProps(props);
-  return <p className={`text-lg text-primary ${props.className || ""}`} {...other} />;
+  return (
+    <p className={`text-lg text-primary ${props.className || ""}`} {...other} />
+  );
 };
 
 export const Large = (props: any) => {
   const [className, other] = extractProps(props);
   return (
-    <div className={`text-lg font-semibold ${props.className || ""}`} {...other} />
+    <div
+      className={`text-lg font-semibold ${props.className || ""}`}
+      {...other}
+    />
   );
 };
 

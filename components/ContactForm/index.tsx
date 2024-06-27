@@ -144,7 +144,7 @@ function ContactForm({ locale }: Props) {
   return (
     <CenteredContainer>
       <div className="flex flex-col md:flex-row gap-8">
-        <H1 className="!text-[128px] max-w-[50%] text-primary">Get in touch</H1>
+        <H1 id="contact" className="!text-[128px] !line-clamp-none overflow-visible h-fit max-w-[50%] text-primary">Get in touch</H1>
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
