@@ -36,10 +36,10 @@ function Hero({ locale }: Props) {
           {t.description(new Date().getFullYear() - 2017)}
         </P>
         <div className="flex flex-col sm:flex-row gap-4 mt-12">
-          <Button size="lg" className="w-fit" asChild>
+          <Button size="lg" className="w-fit hover:px-16" asChild>
             <Link unstyled href="#contact" className="h-auto py-2">{t.cta.primary}</Link>
           </Button>
-          <Button size="lg" className="w-fit" variant="outline" asChild>
+          <Button size="lg" className="w-fit hover:px-16" variant="outline" asChild>
             <Link unstyled href="#case_studies" className="h-auto py-2">{t.cta.secondary}</Link>
           </Button>
         </div>

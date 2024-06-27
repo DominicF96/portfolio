@@ -39,7 +39,7 @@ function ButtonScrollTop({}: Props) {
     <>
       <Button
         variant="secondary"
-        className={`fixed z-40 right-8 xl:right-16 scale-150 bottom-16 transition-opacity ${
+        className={`fixed z-40 right-8 xl:right-16 scale-150 bottom-16 transition-all ${
           showButton ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={scrollToTop}

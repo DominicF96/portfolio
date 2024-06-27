@@ -49,7 +49,7 @@ function Navbar({ locale }: Props) {
         </Link>
         <Button
           variant="link"
-          className="md:hidden ml-auto pr-0"
+          className="md:hidden ml-auto pr-0 hover:px-4"
           onClick={() => setOpen(!isOpen)}
         >
           <Hamburger
@@ -93,7 +93,7 @@ function NavbarMobileDrawer({
         {navbarLinks.map((link) => (
           <li key={link.key}>
             <Button
-              className="w-full text-left justify-start"
+              className="w-full text-left justify-start hover:px-4"
               variant="ghost"
               size="lg"
               onClick={onClose}
@@ -112,7 +112,7 @@ function NavbarMobileDrawer({
         </li>
         <li>
           <Button
-            className="w-full mt-4 text-left justify-start"
+            className="w-full mt-4 text-left justify-start hover:px-4"
             size="lg"
             asChild
             onClick={onClose}
@@ -141,7 +141,7 @@ function NavbarDesktopLinks({ locale }: NavbarDesktopLinksProps) {
           <ul className="flex">
             {navbarLinks.map((link) => (
               <li key={link.key}>
-                <Button variant="ghost" asChild>
+                <Button variant="ghost" asChild className="hover:px-4">
                   <Link href={injectLocaleIfBlog(link.url, locale)}>
                     {t[link.key as keyof typeof t]}
                   </Link>

@@ -33,7 +33,12 @@ function Socials({ className, locale }: Props) {
     <ul className={`flex gap-2 ${className || ""}`}>
       {socials.map((social) => (
         <li key={social.name}>
-          <Button variant="link" className="px-2" aria-label="Github" asChild>
+          <Button
+            variant="link"
+            className="px-2 hover:px-2"
+            aria-label={social.name}
+            asChild
+          >
             <Link href={social.url} target="_blank">
               {SocialsLogoMap(social.name)}
             </Link>
@@ -43,7 +48,7 @@ function Socials({ className, locale }: Props) {
       <li>
         <Button
           variant="link"
-          className="px-2"
+          className="px-2 hover:px-2"
           aria-label="CV / Resume"
           asChild
         >
