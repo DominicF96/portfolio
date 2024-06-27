@@ -14,7 +14,7 @@ export const H1 = (props: any) => {
       className={`scroll-m-20 text-4xl md:text-6xl font-extrabold tracking-wide ${
         props.className || ""
       }`}
-      style={{ lineHeight: "80%" }}
+      style={{ lineHeight: "120%" }}
       {...other}
     />
   );

@@ -11,7 +11,7 @@ const en = {
   case_study: "Case Studies",
   dashboard_template: "Dashboard Template",
   blog: "Blog",
-  contact: "Get in touch",
+  contact: "Contact me",
 };
 
 const fr = {

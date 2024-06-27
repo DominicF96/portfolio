@@ -1,4 +1,5 @@
 export interface I18n {
+  contact: string;
   firstname: {
     label: string;
     placeholder: string;
@@ -50,6 +51,7 @@ export interface I18n {
 }
 
 export const en: I18n = {
+  contact: "Say hello!",
   firstname: {
     label: "First Name",
     placeholder: "John",
@@ -104,6 +106,7 @@ export const en: I18n = {
 };
 
 export const fr: I18n = {
+  contact: "Un petit mot?",
   firstname: {
     label: "Prénom",
     placeholder: "John",

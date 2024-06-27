@@ -60,7 +60,11 @@ function Navbar({ locale }: Props) {
           />
         </Button>
         <NavbarDesktopLinks locale={locale} />
-        <NavbarMobileDrawer locale={locale} isOpen={isOpen} />
+        <NavbarMobileDrawer
+          locale={locale}
+          isOpen={isOpen}
+          onClose={() => setOpen(false)}
+        />
       </CenteredContainer>
     </nav>
   );
@@ -69,13 +73,18 @@ function Navbar({ locale }: Props) {
 type NavbarMobileDrawerProps = {
   locale: Locale;
   isOpen: boolean;
+  onClose: () => void;
 };
 
-function NavbarMobileDrawer({ locale, isOpen }: NavbarMobileDrawerProps) {
+function NavbarMobileDrawer({
+  locale,
+  isOpen,
+  onClose,
+}: NavbarMobileDrawerProps) {
   const t = i18n[locale];
   return (
     <div
-      className={`fixed z-50 w-full md:hidden top-[76px] min-h-[100vh] bg-background flex flex-col justify-between transition-all duration-500 py-24 pt-8 px-4 md:p-8 ${
+      className={`fixed z-50 w-full md:hidden top-[76px] min-h-[100vh] bg-background flex flex-col justify-between transition-all duration-500 py-24 pt-8 pb-32 px-4 md:p-8 ${
         isOpen ? "-left-0" : "left-full"
       }`}
       style={{ height: "calc(100% - 76px)" }}
@@ -83,15 +92,17 @@ function NavbarMobileDrawer({ locale, isOpen }: NavbarMobileDrawerProps) {
       <ul className="flex flex-col gap-2">
         {navbarLinks.map((link) => (
           <li key={link.key}>
-            <Link href={injectLocaleIfBlog(link.url, locale)}>
-              <Button
-                className="-ml-4 rounded-l-none"
-                variant="ghost"
-                size="lg"
-              >
+            <Button
+              className="w-full text-left justify-start"
+              variant="ghost"
+              size="lg"
+              onClick={onClose}
+              asChild
+            >
+              <Link href={injectLocaleIfBlog(link.url, locale)}>
                 {t[link.key as keyof typeof t]}
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </li>
         ))}
       </ul>
@@ -100,11 +111,16 @@ function NavbarMobileDrawer({ locale, isOpen }: NavbarMobileDrawerProps) {
           <Socials locale={locale} />
         </li>
         <li>
-          <Link href="#contact" className="w-full">
-            <Button className="w-full mt-4" size="lg">
+          <Button
+            className="w-full mt-4 text-left justify-start"
+            size="lg"
+            asChild
+            onClick={onClose}
+          >
+            <Link href="#contact" className="w-full">
               {t.contact}
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </li>
       </ul>
     </div>
@@ -141,9 +157,7 @@ function NavbarDesktopLinks({ locale }: NavbarDesktopLinksProps) {
             </li>
             <li>
               <Button className="ml-4" asChild>
-                <Link href="#contact">
-                  {t.contact}
-                </Link>
+                <Link href="#contact">{t.contact}</Link>
               </Button>
             </li>
           </ul>

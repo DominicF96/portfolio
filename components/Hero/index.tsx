@@ -10,6 +10,7 @@ import HeroGraphic from "../HeroGraphic";
 import i18n from "./i18n";
 import Slideshow from "../Slideshow/Slideshow";
 import PARTNERS from "@/constants/partners";
+import Link from "../Link";
 
 type Props = {
   locale: Locale;
@@ -26,27 +27,20 @@ function Hero({ locale }: Props) {
           {t.flavor.part_1}&nbsp;
           <span className="font-bold">{t.flavor.part_2}</span>.
         </Lead>
-        <H1 className="pt-0 font-black">
+        <H1 className="pt-0 font-black" style={{ lineHeight: "100%" }}>
           {t.title.part_1}
           <br />
           <span className="text-primary">{t.title.part_2}</span>
         </H1>
-        <P className="mt-4 max-w-[465px]">{t.description(new Date().getFullYear() - 2017)}</P>
+        <P className="mt-4 max-w-[465px]">
+          {t.description(new Date().getFullYear() - 2017)}
+        </P>
         <div className="flex flex-col sm:flex-row gap-4 mt-12">
-          <Button
-            size="lg"
-            className="w-fit"
-            onClick={() => router.push("#case_studies")}
-          >
-            {t.cta.primary}
+          <Button size="lg" className="w-fit" asChild>
+            <Link unstyled href="#contact" className="h-auto py-2">{t.cta.primary}</Link>
           </Button>
-          <Button
-            size="lg"
-            className="w-fit"
-            variant="outline"
-            onClick={() => router.push("https://blog.dominicfournier.com")}
-          >
-            {t.cta.secondary}
+          <Button size="lg" className="w-fit" variant="outline" asChild>
+            <Link unstyled href="#case_studies" className="h-auto py-2">{t.cta.secondary}</Link>
           </Button>
         </div>
       </div>
@@ -64,7 +58,10 @@ function Hero({ locale }: Props) {
           itemsSize={{ width: 200, height: 64 }}
         />
       </div>
-      <ScrollCTA locale={locale} className="absolute -bottom-20 md:bottom-8 right-0 z-40" />
+      <ScrollCTA
+        locale={locale}
+        className="absolute -bottom-20 md:bottom-8 right-0 z-40"
+      />
     </CenteredContainer>
   );
 }
