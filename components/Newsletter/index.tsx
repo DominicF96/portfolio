@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { H2, P, Small } from "../Typography";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
@@ -15,6 +15,7 @@ type Props = {
 
 function Newsletter({ locale }: Props) {
   const t = i18n[locale];
+  const newsletterRef = useRef(null); // Ref for the newsletter div
   const [email, setEmail] = useState("");
   const emailRe =
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -43,9 +44,45 @@ function Newsletter({ locale }: Props) {
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (newsletterRef.current) {
+        const newsletterPosition =
+          newsletterRef.current.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        const visibleArea = newsletterPosition - windowHeight;
+
+        // Adjust scale based on visibility
+        let scale;
+        if (visibleArea < 0) {
+          // Calculate the percentage of the newsletter that is visible
+          let visiblePercentage = newsletterPosition / windowHeight;
+          scale = 0.9 + 0.3 * (1 - visiblePercentage);
+        } else {
+          scale = 0.9; // Default scale when not in viewport
+        }
+
+        newsletterRef.current.style.transform = `scale(${Math.max(
+          scale,
+          0.8
+        )})`;
+        newsletterRef.current.style.opacity = `${Math.max(scale -0.2, 0.6)}`;
+      } else {
+        console.error("Newsletter ref not found");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <CenteredContainer>
-      <div className="relative mt-56 mb-32 bg-primary text-background rounded-xl">
+      <div
+        ref={newsletterRef}
+        className="relative mt-56 mb-32 bg-primary text-background rounded-xl"
+      >
         <Image
           src="/vectors/envelope.svg"
           width={300}
