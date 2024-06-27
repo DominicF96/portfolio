@@ -53,20 +53,22 @@ function Newsletter({ locale }: Props) {
         const visibleArea = newsletterPosition - windowHeight;
 
         // Adjust scale based on visibility
-        let scale;
+        let scale, translateY;
         if (visibleArea < 0) {
           // Calculate the percentage of the newsletter that is visible
           let visiblePercentage = newsletterPosition / windowHeight;
-          scale = 0.9 + 0.3 * (1 - visiblePercentage);
+          scale = 0.9 + 0.6 * (1 - visiblePercentage);
+          translateY = 150 * (1 - visiblePercentage) - 150; // Adjust Y position based on visibility
         } else {
           scale = 0.9; // Default scale when not in viewport
+          translateY = -150; // No translation when not in viewport
         }
 
-        newsletterRef.current.style.transform = `scale(${Math.max(
-          scale,
-          0.8
-        )})`;
-        newsletterRef.current.style.opacity = `${Math.max(scale -0.2, 0.6)}`;
+        newsletterRef.current.style.transform = `scale(${Math.min(
+          Math.max(scale, 0.8),
+          1.05
+        )}) translateY(${translateY}px)`;
+        newsletterRef.current.style.opacity = `${Math.max(scale - 0.2, 0.6)}`;
       } else {
         console.error("Newsletter ref not found");
       }
