@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Button } from "../ui/button";
 import Link from "next/link";
@@ -17,10 +17,30 @@ type Props = {
 
 function Navbar({ locale }: Props) {
   const [isOpen, setOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 40) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <nav
-      className={`fixed w-full z-[60] m-auto py-4 backdrop-blur-3xl transition-colors ${
-        isOpen ? "bg-background" : "bg-background/60"
+      className={`fixed w-full z-[60] m-auto py-4 transition-colors duration-500 ${
+        isOpen
+          ? "bg-background"
+          : isScrolled
+          ? "bg-background/60 backdrop-blur-3xl"
+          : "bg-transparent"
       }`}
     >
       <CenteredContainer className="flex items-center">
