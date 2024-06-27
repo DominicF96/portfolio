@@ -1,13 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import {
-  GitHubLogoIcon,
-  LinkedInLogoIcon,
-  TwitterLogoIcon,
-} from "@radix-ui/react-icons";
 import { Button } from "../ui/button";
-import socials from "@/constants/socials";
 import Link from "next/link";
 import { Sling as Hamburger } from "hamburger-react";
 import navbarLinks from "@/constants/links";
@@ -25,8 +19,8 @@ function Navbar({ locale }: Props) {
   const [isOpen, setOpen] = useState(false);
   return (
     <nav
-      className={`fixed w-full z-[60] m-auto py-4 backdrop-blur-md transition-colors ${
-        isOpen ? "bg-background" : "bg-background/80"
+      className={`fixed w-full z-[60] m-auto py-4 backdrop-blur-3xl transition-colors ${
+        isOpen ? "bg-background" : "bg-background/60"
       }`}
     >
       <CenteredContainer className="flex items-center">
@@ -138,7 +132,7 @@ function NavbarDesktopLinks({ locale }: NavbarDesktopLinksProps) {
     <div className="hidden md:block ml-8 w-full">
       <ul className="flex justify-between">
         <li>
-          <ul className="flex">
+          <ul className="flex gap-2">
             {navbarLinks.map((link) => (
               <li key={link.key}>
                 <Button variant="ghost" asChild className="hover:px-4">
