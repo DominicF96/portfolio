@@ -6,11 +6,10 @@ import Link from "next/link";
 import { Sling as Hamburger } from "hamburger-react";
 import navbarLinks from "@/constants/links";
 import { Locale } from "@/i18n.config";
-import i18n from "./Navbar.i18n";
-import { CenteredContainer } from "./Container";
+import i18n from "./i18n";
+import { CenteredContainer } from "../Container";
 import Socials from "../Socials";
 import injectLocaleIfBlog from "@/utils/links";
-import { usePathname, useRouter } from "next/navigation";
 
 type Props = {
   locale: Locale;
