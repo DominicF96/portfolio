@@ -96,6 +96,7 @@ function NavbarMobileDrawer({
   onClose,
 }: NavbarMobileDrawerProps) {
   const t = i18n[locale];
+  const publicUrl = process.env.NEXT_PUBLIC_WEBSITE_URL as string;
   return (
     <div
       className={`fixed z-50 w-full md:hidden top-[76px] min-h-[100vh] bg-background flex flex-col justify-between transition-all duration-500 py-24 pt-8 pb-32 px-4 md:p-8 ${
@@ -110,8 +111,8 @@ function NavbarMobileDrawer({
               <Button
                 className="w-full text-left justify-start hover:px-4"
                 variant={
-                  link.url.indexOf(process.env.NEXT_PUBLIC_WEBSITE_URL) !==
-                    -1 || link.url.indexOf("http") === -1
+                  link.url.indexOf(publicUrl) !== -1 ||
+                  link.url.indexOf("http") === -1
                     ? "default"
                     : "ghost"
                 }
@@ -154,6 +155,7 @@ type NavbarDesktopLinksProps = {
 
 function NavbarDesktopLinks({ locale }: NavbarDesktopLinksProps) {
   const t = i18n[locale];
+  const publicUrl = process.env.NEXT_PUBLIC_WEBSITE_URL as string;
 
   return (
     <div className="hidden md:block ml-8 w-full">
@@ -164,8 +166,8 @@ function NavbarDesktopLinks({ locale }: NavbarDesktopLinksProps) {
               <li key={link.key}>
                 <Button
                   variant={
-                    link.url.indexOf(process.env.NEXT_PUBLIC_WEBSITE_URL) !==
-                      -1 || link.url.indexOf("http") === -1
+                    link.url.indexOf(publicUrl) !== -1 ||
+                    link.url.indexOf("http") === -1
                       ? "default"
                       : "ghost"
                   }
