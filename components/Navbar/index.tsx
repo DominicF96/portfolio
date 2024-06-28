@@ -6,10 +6,11 @@ import Link from "next/link";
 import { Sling as Hamburger } from "hamburger-react";
 import navbarLinks from "@/constants/links";
 import { Locale } from "@/i18n.config";
-import i18n from "./i18n";
-import { CenteredContainer } from "../Container";
+import i18n from "./Navbar.i18n";
+import { CenteredContainer } from "./Container";
 import Socials from "../Socials";
 import injectLocaleIfBlog from "@/utils/links";
+import { usePathname, useRouter } from "next/navigation";
 
 type Props = {
   locale: Locale;
@@ -104,21 +105,28 @@ function NavbarMobileDrawer({
       style={{ height: "calc(100% - 76px)" }}
     >
       <ul className="flex flex-col gap-2">
-        {navbarLinks.map((link) => (
-          <li key={link.key}>
-            <Button
-              className="w-full text-left justify-start hover:px-4"
-              variant="ghost"
-              size="lg"
-              onClick={onClose}
-              asChild
-            >
-              <Link href={injectLocaleIfBlog(link.url, locale)}>
-                {t[link.key as keyof typeof t]}
-              </Link>
-            </Button>
-          </li>
-        ))}
+        {navbarLinks.map((link) => {
+          return (
+            <li key={link.key}>
+              <Button
+                className="w-full text-left justify-start hover:px-4"
+                variant={
+                  link.url.indexOf(process.env.NEXT_PUBLIC_WEBSITE_URL) !==
+                    -1 || link.url.indexOf("http") === -1
+                    ? "default"
+                    : "ghost"
+                }
+                size="lg"
+                onClick={onClose}
+                asChild
+              >
+                <Link href={injectLocaleIfBlog(link.url, locale)}>
+                  {t[link.key as keyof typeof t]}
+                </Link>
+              </Button>
+            </li>
+          );
+        })}
       </ul>
       <ul className="flex flex-col gap-2 ">
         <li>
@@ -155,7 +163,16 @@ function NavbarDesktopLinks({ locale }: NavbarDesktopLinksProps) {
           <ul className="flex gap-2">
             {navbarLinks.map((link) => (
               <li key={link.key}>
-                <Button variant="ghost" asChild className="hover:px-4">
+                <Button
+                  variant={
+                    link.url.indexOf(process.env.NEXT_PUBLIC_WEBSITE_URL) !==
+                      -1 || link.url.indexOf("http") === -1
+                      ? "default"
+                      : "ghost"
+                  }
+                  asChild
+                  className="hover:px-4"
+                >
                   <Link href={injectLocaleIfBlog(link.url, locale)}>
                     {t[link.key as keyof typeof t]}
                   </Link>
