@@ -15,7 +15,7 @@ function CaseStudies({ locale }: Props) {
   return (
     <div>
       <CenteredContainer className="mt-48">
-        <H2 id="case_studies">{t.title}</H2>
+        <H2 id="projects">{t.title}</H2>
       </CenteredContainer>
       <div className="mt-16">
         {caseStudies

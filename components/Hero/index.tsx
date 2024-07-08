@@ -48,7 +48,7 @@ function Hero({ locale }: Props) {
             variant="outline"
             asChild
           >
-            <Link unstyled href="#case_studies" className="h-auto py-2">
+            <Link unstyled href="#projects" className="h-auto py-2">
               {t.cta.secondary}
             </Link>
           </Button>
