@@ -29,7 +29,7 @@ const en = {
     `With over ${years} years of experience in Product Design and Frontend development, I specialize in coordinating Agile teams to build intuitive, feature-rich dashboards and websites.`,
   cta: {
     primary: "Contact me",
-    secondary: "Case Studies",
+    secondary: "Projects",
   },
   trusted_by: "Trusted by",
 };
@@ -47,7 +47,7 @@ const fr = {
     `Avec plus de ${years} ans d'expérience en design de produit et développement Frontend, je me spécialise dans la coordination d'équipes Agiles pour construire des tableaux de bord et des sites web intuitifs et riches en fonctionnalités.`,
   cta: {
     primary: "Contactez-moi",
-    secondary: "Études de cas",
+    secondary: "Projets",
   },
   trusted_by: "Ils me font confiance",
 };

@@ -13,7 +13,7 @@ export interface I18n {
 }
 
 const en = {
-  title: "Case Studies",
+  title: "Projects",
   see_case_study: "See Case Study",
   open: "Open",
   wip: "Work in progress, check back soon!",
@@ -88,7 +88,7 @@ const en = {
 };
 
 const fr = {
-  title: "Études de cas",
+  title: "Projets",
   see_case_study: "Voir l'étude de cas",
   open: "Ouvrir",
   wip: "En cours de rédaction, revenez bientôt!",

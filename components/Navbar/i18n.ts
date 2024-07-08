@@ -8,7 +8,7 @@ export interface I18n {
 
 const en = {
   home: "Home",
-  case_study: "Case Studies",
+  case_study: "Projects",
   dashboard_template: "Dashboard Template",
   blog: "Blog",
   contact: "Contact me",
@@ -16,7 +16,7 @@ const en = {
 
 const fr = {
   home: "Accueil",
-  case_study: "Études de cas",
+  case_study: "Projets",
   dashboard_template: "Modèle de tableau de bord",
   blog: "Blog",
   contact: "Contactez-moi",
