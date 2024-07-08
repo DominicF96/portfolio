@@ -1,4 +1,3 @@
-"use client";
 import { GLOSSARY } from "@/constants/glossary";
 import React from "react";
 
