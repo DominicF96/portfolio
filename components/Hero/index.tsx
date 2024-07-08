@@ -54,7 +54,7 @@ function Hero({ locale }: Props) {
           </Button>
         </div>
       </div>
-      <div className="mt-24 md:pr-24">
+      <div className="mt-16 md:pr-24">
         <Slideshow
           className="hidden md:block mt-4 relative z-0"
           items={PARTNERS.map((partner) => {
