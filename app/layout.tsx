@@ -25,7 +25,7 @@ export default function RootLayout({
             border: "1px solid rgb(92, 214, 173)",
             outline: "1px solid rgba(255,255,255,0.4)",
           }}
-          innerScale={20}
+          innerScale={10}
           trailingSpeed={0}
           clickables={[
             "a",
