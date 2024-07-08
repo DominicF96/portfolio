@@ -11,6 +11,7 @@ import i18n from "./i18n";
 import Slideshow from "../Slideshow/Slideshow";
 import PARTNERS from "@/constants/partners";
 import Link from "../Link";
+import Glossary from "../Glossary/Glossary";
 
 type Props = {
   locale: Locale;
@@ -37,15 +38,23 @@ function Hero({ locale }: Props) {
         </P>
         <div className="flex flex-col sm:flex-row gap-4 mt-12">
           <Button size="lg" className="w-fit hover:px-16" asChild>
-            <Link unstyled href="#contact" className="h-auto py-2">{t.cta.primary}</Link>
+            <Link unstyled href="#contact" className="h-auto py-2">
+              {t.cta.primary}
+            </Link>
           </Button>
-          <Button size="lg" className="w-fit hover:px-16" variant="outline" asChild>
-            <Link unstyled href="#case_studies" className="h-auto py-2">{t.cta.secondary}</Link>
+          <Button
+            size="lg"
+            className="w-fit hover:px-16"
+            variant="outline"
+            asChild
+          >
+            <Link unstyled href="#case_studies" className="h-auto py-2">
+              {t.cta.secondary}
+            </Link>
           </Button>
         </div>
       </div>
       <div className="mt-24 md:pr-24">
-        {/* <Small>{t.trusted_by}</Small> */}
         <Slideshow
           className="hidden md:block mt-4 relative z-0"
           items={PARTNERS.map((partner) => {
