@@ -14,7 +14,7 @@ function Glossary({}: Props) {
   });
 
   return (
-    <div className="flex flex-row justify-between flex-wrap gap-8 gap-y-4 mt-4 mix-blend-multiply">
+    <div className="flex flex-row justify-between flex-wrap gap-8 gap-y-4 mt-4 mix-blend-multiply max-h-[400px] overflow-hidden py-1">
       {sortedGlossary.map((keyword) => (
         <div
           key={`keyword_${keyword.name}`}

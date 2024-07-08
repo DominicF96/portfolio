@@ -39,7 +39,7 @@ function Navbar({ locale }: Props) {
         isOpen
           ? "bg-background"
           : isScrolled
-          ? "bg-background/60 backdrop-blur-3xl"
+          ? "bg-background"
           : "bg-transparent"
       }`}
     >
@@ -184,7 +184,7 @@ function NavbarDesktopLinks({ locale }: NavbarDesktopLinksProps) {
         </li>
         <li>
           <ul className="flex items-center">
-            <li>
+            <li className="hidden lg:block">
               <Socials locale={locale} />
             </li>
             <li>
