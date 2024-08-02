@@ -17,7 +17,7 @@ const PARTNERS = [
   {
     id: "fanslab",
     name: "Fanslab",
-    url: "https://fanslab.com/",
+    url: "https://www.facebook.com/fanslab/",
   },
 ];
 export default PARTNERS;
