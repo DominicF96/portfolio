@@ -95,7 +95,7 @@ const fr = {
   back: "Retour",
   cases: {
     anthony_king_website: {
-      title: "Anthony King • Site Web",
+      title: "Anthony King • Site Web (En cours)",
       description:
         "Anthony King est un courtier hypothécaire et planificateur financier dans la région du Grand Montréal.",
     },
