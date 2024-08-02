@@ -40,7 +40,7 @@ const en = {
         "You are Here! This is the 3rd version of my personal portfolio. Built with Next.js and Tailwind CSS, it is also much more representative of my current skills.",
     },
     pinax_app: {
-      title: "Pinax • Web Platform (WIP)",
+      title: "Pinax • Web Platform",
       description:
         "Pinax's cloud services platform allows users to access various decentralized services, such as RPC endpoints, Firehose, and Substreams.",
     },
@@ -50,7 +50,7 @@ const en = {
         "EOS Nation's name service allows users to associate domain names with EOSIO wallet addresses.",
     },
     pinax_website: {
-      title: "Pinax • Website (WIP)",
+      title: "Pinax • Website",
       description:
         "Pinax's website showcases the various services offered by the company.",
     },
@@ -95,7 +95,7 @@ const fr = {
   back: "Retour",
   cases: {
     anthony_king_website: {
-      title: "Anthony King • Site Web (En cours)",
+      title: "Anthony King • Site Web",
       description:
         "Anthony King est un courtier hypothécaire et planificateur financier dans la région du Grand Montréal.",
     },
@@ -115,7 +115,7 @@ const fr = {
         "Vous êtes ici! Il s'agit de la 3e version de mon portfolio personnel. Construit avec Next.js et Tailwind CSS, il est également beaucoup plus représentatif de mes compétences actuelles.",
     },
     pinax_app: {
-      title: "Pinax • Plateforme Web (En cours)",
+      title: "Pinax • Plateforme Web",
       description:
         "La plateforme web de Pinax permet à ses utilisateurs d'accéder à différents services décentralisés, tels que des points d'accès RPC, Firehose et Substreams.",
     },
